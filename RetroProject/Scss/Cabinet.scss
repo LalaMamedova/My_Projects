@@ -1,0 +1,20 @@
+@import url(/Scss/Addons.css);
+@import url(/Scss/MainHeader.css);
+@import url(/Scss/Main.css);
+
+.main-div{
+    display: block;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Arcade';
+}
+.tech-list{
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.tech-list:last-child{
+	margin-bottom: 50px;
+}

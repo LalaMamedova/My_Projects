@@ -1,0 +1,146 @@
+@import url(/Scss/Addons.css);
+@import url(/Scss/Animation.css);
+.main-header-div {
+  display: flex;
+  background-image: url("../Assets/Img/Caset.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border: 3px solid black;
+  height: 120px;
+  animation: slide-in-left 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.1s;
+}
+
+.logo-nav, #loader-logo {
+  font-family: "Disko teque";
+  position: relative;
+  margin: 0;
+  width: 300px;
+}
+.logo-nav h1, #loader-logo h1 {
+  margin: 0;
+}
+.logo-nav h1 a, #loader-logo h1 a {
+  color: rgba(0, 0, 0, 0.758);
+  font-size: 60px;
+  text-decoration: none;
+  justify-content: space-between;
+  display: flex;
+  font-weight: bold;
+  transition: all ease-in 0.4s;
+}
+.logo-nav h1 a:hover, #loader-logo h1 a:hover {
+  background: linear-gradient(to bottom, #ff0000, #3300ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  font-size: 70px;
+  margin-left: 20px;
+}
+
+.auto-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-top: 5px;
+}
+
+.bottons-div a {
+  text-align: none;
+  color: black;
+}
+
+.music-bar {
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  margin-left: 45%;
+  margin-bottom: 5px;
+}
+
+#tech-card,
+.tech-card {
+  position: relative;
+  max-height: 780px;
+  min-height: 770px;
+  width: 32%;
+  margin: 30px 20px;
+  padding: 50px;
+  border: 5px solid #ffffff;
+  font-size: 30px;
+  border-radius: 5%;
+  box-shadow: 20px 20px 0px 0px black;
+  color: white;
+  text-align: center;
+  font-family: "Handjet";
+  background: linear-gradient(135deg, #1e38ff, #ff78c7);
+  animation: swing-in-bottom-fwd 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation-delay: 0.1s;
+}
+#tech-card img,
+.tech-card img {
+  display: flex;
+  border-radius: 5%;
+  width: 100%;
+  height: 45%;
+}
+#tech-card h1, #tech-card h2, #tech-card h3, #tech-card h4, #tech-card h5, #tech-card h6, #tech-card p,
+.tech-card h1,
+.tech-card h2,
+.tech-card h3,
+.tech-card h4,
+.tech-card h5,
+.tech-card h6,
+.tech-card p {
+  text-wrap: wrap;
+  flex-wrap: wrap;
+}
+#tech-card h6,
+.tech-card h6 {
+  font-size: 20px;
+}
+#tech-card #tech-fact,
+.tech-card #tech-fact {
+  color: lightblue;
+}
+#tech-card p,
+.tech-card p {
+  font-size: 22px;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  color: white;
+  font-weight: bolder;
+}
+
+.tech-card-buttons {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 15px;
+}
+.tech-card-buttons button {
+  margin-right: 15px;
+}
+
+.to-full-info-div {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  color: cyan;
+  margin-top: 15px;
+}
+
+.interest-fact span {
+  font-size: 22px;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  color: rgb(113, 255, 243);
+  font-weight: bolder;
+}/*# sourceMappingURL=MainHeader.css.map */

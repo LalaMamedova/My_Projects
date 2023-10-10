@@ -1,0 +1,313 @@
+@import url(/Scss/Addons.css);
+@import url(/Scss/Animation.css);
+@import url(/Scss/MainHeader.css);
+body {
+  margin: 0;
+  transition: all 0.4s ease-in;
+  background: linear-gradient(285deg, #34eeff, #ff269d);
+}
+
+main {
+  min-height: 85vh;
+  position: relative;
+}
+
+a {
+  text-align: none;
+  color: black;
+}
+
+.main-div {
+  display: flex;
+  text-align: center;
+  position: relative;
+  font-family: "Handjet";
+  max-width: calc(33.33% - 20px);
+}
+
+.add-div {
+  display: flex;
+  position: relative;
+}
+
+.add-box {
+  margin-bottom: 20px;
+  animation: swing-in-bottom-fwd 1.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.add-coll-div {
+  font-family: "Handjet";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 25px 50px;
+  animation: swing-in-bottom-fwd 1.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+.add-coll-div input {
+  position: relative;
+  box-shadow: 0px 0px 20px black;
+  background: linear-gradient(100deg, #f2d9ff, #ff89df);
+  font-size: 20px;
+  border-radius: 10px;
+  width: 350px;
+  height: 40px;
+}
+.add-coll-div textarea {
+  box-shadow: 0px 0px 20px black;
+  background: linear-gradient(100deg, #f2d9ff, #ff89df);
+  font-size: 22px;
+  border-radius: 10px;
+}
+.add-coll-div .group-box select {
+  background: linear-gradient(100deg, #f2d9ff, #ff89df);
+  color: rgb(125, 78, 255);
+  font-size: 25px;
+  font-family: "Handjet";
+  font-weight: bolder;
+  border-radius: 5px;
+  width: 350px;
+}
+
+.add-fact-div {
+  display: block;
+  position: relative;
+}
+
+.add-char-div.add-coll-div {
+  font-size: 20px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.characteristic-input {
+  display: flex;
+}
+
+#input-tech-char-value, #input-tech-char-name {
+  margin-top: 10px;
+  margin-right: 16px;
+}
+
+.temp-div {
+  display: block;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-family: "Handjet";
+  margin: 20% 5%;
+  transition: all 0.5s ease-in-out;
+}
+.temp-div .tech-card {
+  flex-wrap: wrap;
+  list-style: none;
+  border: 5px solid #ffffff;
+  position: relative;
+  width: 420px;
+  height: 650px;
+  padding: 40px;
+  border-radius: 5%;
+  background: linear-gradient(135deg, #1e3cff, #ff1f75);
+  box-shadow: 0px 0px 20px black;
+  --webkit-animation: scale-in-hor-center 0.5s ease-out both;
+  animation: scale-in-hor-center 0.5s ease-out both;
+  transition: all 0.5s ease;
+}
+.temp-div .tech-card img {
+  display: flex;
+  position: relative;
+  border-radius: 5%;
+  width: 100%;
+  height: 220px;
+  margin-bottom: 10px;
+}
+.temp-div .tech-card p {
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-weight: bolder;
+  position: relative;
+  font-size: 22px;
+  -webkit-line-clamp: 3;
+}
+.temp-div .tech-card h4 {
+  font-size: 20px;
+}
+.temp-div .tech-card h5 {
+  font-size: 20px;
+  cursor: pointer;
+}
+.temp-div .tech-card a {
+  display: flex;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
+}
+.temp-div .tech-card #tech-fact {
+  -webkit-line-clamp: 2;
+  color: cyan;
+}
+
+.confirm-div {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  margin-bottom: 5%;
+  height: 50px;
+}
+.confirm-div button {
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.api-state {
+  position: relative;
+  text-align: center;
+  font-weight: bolder;
+  bottom: 5px;
+  padding: 30px;
+  font-size: 35px;
+  font-family: "Handjet";
+}
+
+.foot-div {
+  display: fixed;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact-nav {
+  display: flex;
+  font-family: "Handjet";
+  flex-wrap: wrap;
+  background: black;
+}
+.contact-nav li {
+  display: flex;
+  font-size: 30px;
+  margin-left: 18px;
+  justify-content: space-around;
+}
+.contact-nav li a {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-div {
+    margin-left: 25%;
+    display: block;
+    transition: all 0.5s ease-in-out;
+  }
+  .temp-div {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .add-div {
+    flex-direction: column;
+  }
+  .add-coll-div {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .add-fact-div {
+    display: block;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  .add-char-div {
+    margin: 5px 0px;
+  }
+  .confirm-div {
+    position: relative;
+    margin: 0;
+    right: 5%;
+    bottom: 5%;
+  }
+  .api-state {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 720px) {
+  .main-div {
+    position: relative;
+    margin: 10px;
+  }
+  .confirm-div {
+    margin: 0%;
+    margin-left: 60px;
+    top: 5px;
+    display: inline;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .confirm-div button {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .music-bar {
+    position: absolute;
+    align-items: flex-start;
+    transition: all 0.6s ease;
+    margin: 0;
+  }
+  .add-coll-div {
+    position: relative;
+    margin: 10px;
+  }
+  .add-coll-div input {
+    width: 250px;
+    position: relative;
+    transition: all 0.4s ease;
+  }
+  .add-coll-div .group-box select {
+    width: 250px;
+  }
+  .add-box textarea {
+    position: relative;
+    width: 250px;
+  }
+  .confirm-div {
+    display: block;
+    position: relative;
+    bottom: 10px;
+    margin-left: 40px;
+  }
+  .confirm-div button {
+    font-size: 15px;
+  }
+  .characteristic-input {
+    display: block;
+  }
+  .temp-div {
+    position: relative;
+    width: 100px;
+    margin: 10px;
+  }
+  .temp-div .tech-card {
+    margin: 0;
+    width: 250px;
+  }
+  .group-box select {
+    background: linear-gradient(100deg, #f2d9ff, #ff89df);
+    color: rgb(125, 78, 255);
+    font-size: 25px;
+    font-family: "Handjet";
+    font-weight: bolder;
+    border-radius: 5px;
+    width: 250px;
+  }
+}/*# sourceMappingURL=AddPage.css.map */

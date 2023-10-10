@@ -1,0 +1,207 @@
+@import url(/Scss/Addons.css);
+@import url(/Scss/Animation.css);
+@import url(/Scss/LoadingScreen.css);
+@import url(/Scss/MainHeader.css);
+
+$color_1: black;
+$color_2: rgba(0, 0, 0, 0.758);
+$color_3: transparent;
+$color_4: white;
+$color_5: rgb(113, 255, 243);
+$color_6: rgb(125, 78, 255);
+$color_7: rgb(255, 255, 255);
+$font-family_1: "Disko teque";
+$font-family_2: "Handjet";
+$font-family_3: "Press start";
+
+$background-color_1: pink;
+$animation-delay: 0.1s;
+
+a {
+	text-decoration: none;
+	color: $color_1;
+}
+
+.no-res-div{
+	display: block;
+	justify-content: center;
+	align-self: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+	font-family: $font-family_1;
+	font-size: 180px;
+	margin: 10%;
+	left: 25%;
+	
+	h1 a{
+		color: cyan;
+		font-family: $font-family_2;
+	}
+}
+body {
+	margin: 0;
+	min-height: 100vh;
+	transition: all 0.4s ease;
+	
+}
+
+
+.main-div {
+	display: flex;
+}
+
+.list-div {
+	display: flex;
+	font-family: $font-family_2;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.list-div:last-child{
+	margin-bottom: 50px;
+}
+
+.side-bar-div{
+	font-family: $font-family_2;
+	box-shadow: 20px 30px 0px 0px black;
+	background: linear-gradient(85deg, #ffc273, #b222ff);
+	width: 200px;
+	margin-right: 5px;
+	display: block;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-weight: bolder;
+	-webkit-animation: slide-in-left 1.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 1.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			animation-delay:$animation-delay;
+
+			h1,h2,h3,h4,p{
+				color: black;
+			}
+}
+.side-bar-div{
+	background: linear-gradient(85deg, #ffc273, #b222ff);
+}
+
+
+.filtration-div {
+	position: relative;
+	width: 200px;
+	padding: 20px 0px;
+	border-radius: 20px 20px 0 0px;
+}
+.group-box {
+	border-radius: 5px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 85px;
+	input {
+		display: block;
+		height: 25px;
+		border-radius: 5px;
+		background: pink;
+	}
+	select {
+		background-color: $background-color_1;
+		color: $color_6;
+		font-size: 25px;
+		font-family: $font-family_2;
+		font-weight: bolder;
+		border-radius: 5px;
+	}
+	h3 {
+		margin-top: 0;
+		margin: 22px;
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
+	p {
+		margin: 0;
+		font-weight: bold;
+		font-size: 25px;
+	}
+}
+.foot-div {
+	display: inline;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.contact-nav {
+	display: flex;
+	font-family: $font-family_2;
+	position: relative;
+	flex-wrap: wrap;
+	background: black;
+	li {
+		display: flex;
+		font-size: 30px;
+		margin-left: 18px;
+		justify-content: space-around;
+		a {
+			display: flex;
+			align-items: center;
+			color: $color_7;
+			text-decoration: none;
+			font-weight: bolder;
+		}
+	}
+}
+
+body {
+	background: black;
+	font-family: "Oswald", sans-serif;
+	font-style: italic;
+}
+  
+.container {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 40%;
+	left: 50%;
+  }
+  
+  .glitch {
+	display: block;
+	justify-content: center;
+	align-self: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+	color: rgb(223, 191, 191);
+	position: absolute;
+	font-size: 60px;
+	animation: glitch 1s 1.2s infinite;
+
+	::before {
+		content: attr(data-text);
+		position: absolute;
+		left: -2px;
+		text-shadow: -5px 0 magenta;
+		background: black;
+		overflow: hidden;
+		top: 0;
+		animation: noise-1 2s linear infinite alternate-reverse, glitch 3s 3.05s infinite;
+	}
+
+		::after {
+			content: attr(data-text);
+			position: absolute;
+			left: 2px;
+			text-shadow: -5px 0 lightgreen;
+			background: black;
+			overflow: hidden;
+			top: 0;
+			animation: noise-2 2s linear infinite alternate-reverse, glitch 1s 2s infinite;
+		}
+
+  }
+  
+
+
+  

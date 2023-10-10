@@ -1,0 +1,276 @@
+@import url(/Scss/Addons.css);
+$color_1: white;
+$color_2: #ffd103;
+$color_3: #d6bd00;
+$color_4: #000;
+$color_5: black;
+$font-family_1: "Handjet";
+$font-family_2: 'Disko teque';
+$background-color_1: #ff003b;
+$background-color_2: #f27;
+$background-color_3: transparent;
+
+.about-us-button {
+	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	&:hover {
+		background-color: $background-color_1;
+	}
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+body {
+	background: linear-gradient(90deg, #ff1f1f, #b300c3);
+	color: $color_1;
+	text-align: center;
+	font-family: $font-family_1;
+}
+.mobile-menu-div {
+	display: none;
+}
+.descktop-menu-div {
+	display: flex;
+}
+header {
+	nav {
+		transition: all 0.5s ease;
+		background-color: $background-color_2;
+		padding: 20px 0;
+		ul {
+			list-style: none;
+			li {
+				display: inline;
+				margin: 0 20px;
+				a {
+					text-decoration: none;
+					color: $color_1;
+					font-weight: bold;
+					transition: color 0.3s;
+					font-size: 25px;
+					&:hover {
+						color: $color_2;
+					}
+				}
+			}
+		}
+	}
+	.title {
+		font-size: 36px;
+		text-align: center;
+		margin-top: 20px;
+	}
+}
+.about-us-div {
+	padding: 40px;
+	display: flex;
+	position: relative;
+	text-align: center;
+	transition: all 0.5s ease;
+	.about {
+		h1 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			margin-left: 20%;
+		}
+		p {
+			display: flex;
+			flex-wrap: wrap;
+			margin: auto;
+			margin-left: 20%;
+			word-wrap: break-word;
+			line-height: 1.5;
+			font-size: 28px;
+			max-width: 35em;
+		}
+	}
+	.image-gallery {
+		img {
+			position: relative;
+			margin-left: 20%;
+			margin-top: 20%;
+			border-radius: 30% 30% 20px 20px;
+		}
+	}
+}
+.privacy {
+	display: inline;
+	text-align: center;
+	position: relative;
+	transition: all 0.5s ease;
+	ol {
+		text-align: center;
+		position: relative;
+		flex-wrap: wrap;
+		margin: 25px;
+		li {
+			padding-bottom: 40px;
+			display: inline;
+			list-style: decimal;
+			p {
+				display: block;
+				flex-wrap: wrap;
+				word-wrap: break-word;
+				line-height: 1.5;
+				font-size: 45px;
+				max-width: 100%;
+				padding-bottom: 50px;
+				a {
+					text-decoration: none;
+					color: $color_3;
+					margin-left: 5px;
+					&:active {
+						color: $color_4;
+					}
+				}
+			}
+		}
+	}
+	h2 {
+		display: inline;
+		font-size: 50px;
+	}
+}
+.contacts {
+	display: flex;
+	text-align: center;
+	position: absolute;
+	flex-direction: column;
+	flex-wrap: wrap;
+	transition: all 0.5s ease;
+	ol {
+		display: flex;
+		text-align: center;
+		position: relative;
+		flex-wrap: wrap;
+		margin: 25px;
+		li {
+			padding: 40px;
+			display: inline;
+			list-style: none;
+			p {
+				display: block;
+				flex-wrap: wrap;
+				word-wrap: break-word;
+				line-height: 1.5;
+				font-size: 35px;
+				max-width: 100%;
+				padding-bottom: 50px;
+				a {
+					text-decoration: none;
+					color: $color_3;
+					margin-left: 5px;
+					&:active {
+						color: $color_4;
+					}
+				}
+			}
+		}
+	}
+	h2 {
+		display: inline;
+		font-size: 50px;
+	}
+}
+footer {
+	background: #f27;
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0;
+	p {
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.descktop-menu-div {
+		display: none;
+	}
+	.mobile-menu-div {
+		display: flex;
+		.logo-nav {
+			left: 25%;
+			font-family: $font-family_2;
+			position: relative;
+			background-color: $background-color_3;
+			h1 {
+				a {
+					color: $color_5;
+					font-size: 55px;
+					text-decoration: none;
+					justify-content: space-between;
+					display: flex;
+				}
+			}
+		}
+	}
+	.about-us-div {
+		display: block;
+		position: relative;
+		.about {
+			h1 {
+				font-size: 36px;
+				margin-bottom: 20px;
+				margin-left: 15%;
+			}
+			p {
+				position: relative;
+				word-wrap: break-word;
+				margin-left: 20%;
+				line-height: 1.5;
+				font-size: 28px;
+				max-width: 20em;
+			}
+		}
+		.image-gallery {
+			img {
+				position: relative;
+				margin-left: 5%;
+			}
+		}
+	}
+	.contacts {
+		display: block;
+		position: relative;
+		ol {
+			display: block;
+			position: relative;
+			li {
+				display: block;
+				position: relative;
+				padding: 20px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 720px) {
+	.mobile-menu-div {
+		display: flex;
+		.logo-nav {
+			left: 15%;
+		}
+	}
+	.about-us-div {
+		display: block;
+		position: relative;
+		flex-direction: column;
+		.about {
+			margin-left: 0;
+			margin-top: 0;
+			p {
+				margin-left: 5%;
+			}
+		}
+		.image-gallery {
+			img {
+				margin-left: 5%;
+			}
+		}
+	}
+}

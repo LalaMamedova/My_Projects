@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/Scss/Main.css" >
+    <link rel="stylesheet" href="/Scss/Button.css">
+    <link rel="stylesheet" href="/Scss/Animation.css">
+    <link rel="shortcut icon" href="/Assets/Icon/Color_Synthwave.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://kit.fontawesome.com/94ed063ed7.js" crossorigin="anonymous"></script>
+    <script defer src="/JS/main-mobile.js"></script>
+    <script defer src="/JS/main.js" type="module"></script>
+    <script defer src="/JS/templates.js" type="module"></script>
+    <script defer src="/JS/apiMethods.js" type="module"></script>
+    <script defer src='/JS/filtration.js' type="module"></script>
+    <script defer src='/JS/changeMode.js' type="module"></script>
+    <script defer src="/JS/headerBtns.js"></script>
+    <script defer src="/JS/music.js"></script>
+
+    <title>RETRO</title>
+</head>
+<body>
+
+    <header>
+        <div class="main-header-div">
+            <nav class="logo-nav">
+                <h1><a href="#">RETRO</a></h1>
+            </nav>
+            
+            <div class="music-bar">
+                <audio class="audio" src="/Assets/Media/Messages from the Stars.mp3" ></audio>
+                <button class="music-button prev-music"><i class="fa-solid fa-backward-step"></i></button>
+                <button class="music-button play-music"><i class="fa-solid fa-music fa-flip"></i></button>
+                <button class="music-button next-music"><i class="fa-solid fa-forward-step"></i></button>
+            </div>
+
+           
+            <nav class="auto-nav">                
+                <button id="cabinet-btn" class="main-button">
+                    <a href="Cabinet.html"><i  class="fa fa-home fa-fw w3-margin-right"></i>
+                    </a>Cabinet</button>
+
+                <button id="sign-in-btn" class="main-button"><a href="/Html/SignIn.html">
+                    <i class="fa fa-user fa-fw w3-margin-right"></i></a>Sign in</button>
+                        
+                <button  id="sign-up-btn" class="main-button">
+                        <a href="SignUp.html"><i class="fa fa-user-plus fa-fw w3-margin-right"></i>
+                        </a>Sign up</button>
+                  
+            </nav>
+                
+            <div>
+                <button  id="mode-btn" class="main-button"><i class="fa fa-sun-o" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main >
+        <div id="loader-container">
+            <div id="loader-logo"><h1>RETRO</h1></div>
+            <div id="loader-progress">
+                <div id="film-roll"></div>
+                <div id="loader-bar"></div>
+            </div>
+            <div id="loader-message">Loading...</div>
+        </div>
+    
+        <div class="filter-div">
+            <button id="menu-btn" class="menu-button"><span class="glyphicon glyphicon-option-horizontal"></span></button>
+        </div>
+
+        <div class="main-div">
+            <div class="side-bar-div" id='sideBar'>
+                <div class="filtration-div">
+                    <h1>Filtration</h1>
+
+                    <div class="group-box">
+                        <h3>Year</h3>
+                        <input style="width: 90%;" type="range" min="1600" id="yearRange">
+                        <p id="yearChoice">1600</p>
+                    </div>
+                    
+                    <div class="group-box">
+                        <h3>Name</h3>
+                        <input type="search" id="search-name">
+                    </div>
+                    
+                    <div class="group-box">
+                        <h3>Technology type</h3>
+                        <select id="tech-type-box">
+                            <option value=""></option>
+                            <option value="Computer">Computer</option>
+                            <option value="Telephone">Telephone</option>
+                            <option value="Radio">Radio</option>
+                            <option value="Consoles">Consoles</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="group-box">
+                        <h3>Description</h3>
+                        <input type="search" id="description-search">
+                    </div>
+                </div>
+                <div class="bottons-div"  style="align-items: center; display: block;">
+                    <button class="big-btns" id="filter-btn">Submit filter</button>
+                    <button class="big-btns" id="add-tech">Add technology</button>
+                    <button class="big-btns" id="add-temp">Add Alredy Made Cards</button>
+                </div>
+            </div>
+
+
+            <div class="list-div" id="tech-list"></div>
+           
+    </main>
+    <footer>
+        <div class="foot-div">
+            <nav class="contact-nav">
+                <li><a  href="#">Home</a></li>
+                <li><a  href="AboutUs.html">Abous us</a></li>
+                <li><a  href="Privacy.html">Privacy</a></li>
+                <li><a  href="Contacts.html">Contacts</a></li>
+             </nav>
+        </div>
+    </footer>
+    
+</body>
+</html>

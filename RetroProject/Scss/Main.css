@@ -1,0 +1,184 @@
+@import url(/Scss/Addons.css);
+@import url(/Scss/Animation.css);
+@import url(/Scss/LoadingScreen.css);
+@import url(/Scss/MainHeader.css);
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.no-res-div {
+  display: block;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  font-family: "Disko teque";
+  font-size: 180px;
+  margin: 10%;
+  left: 25%;
+}
+.no-res-div h1 a {
+  color: cyan;
+  font-family: "Handjet";
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  transition: all 0.4s ease;
+}
+
+.main-div {
+  display: flex;
+}
+
+.list-div {
+  display: flex;
+  font-family: "Handjet";
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.list-div:last-child {
+  margin-bottom: 50px;
+}
+
+.side-bar-div {
+  font-family: "Handjet";
+  box-shadow: 20px 30px 0px 0px black;
+  background: linear-gradient(85deg, #ffc273, #b222ff);
+  width: 200px;
+  margin-right: 5px;
+  display: block;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 0.1s;
+}
+.side-bar-div h1, .side-bar-div h2, .side-bar-div h3, .side-bar-div h4, .side-bar-div p {
+  color: black;
+}
+
+.side-bar-div {
+  background: linear-gradient(85deg, #ffc273, #b222ff);
+}
+
+.filtration-div {
+  position: relative;
+  width: 200px;
+  padding: 20px 0px;
+  border-radius: 20px 20px 0 0px;
+}
+
+.group-box {
+  border-radius: 5px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 85px;
+}
+.group-box input {
+  display: block;
+  height: 25px;
+  border-radius: 5px;
+  background: pink;
+}
+.group-box select {
+  background-color: pink;
+  color: rgb(125, 78, 255);
+  font-size: 25px;
+  font-family: "Handjet";
+  font-weight: bolder;
+  border-radius: 5px;
+}
+.group-box h3 {
+  margin-top: 0;
+  margin: 22px;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.group-box p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.foot-div {
+  display: inline;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.contact-nav {
+  display: flex;
+  font-family: "Handjet";
+  position: relative;
+  flex-wrap: wrap;
+  background: black;
+}
+.contact-nav li {
+  display: flex;
+  font-size: 30px;
+  margin-left: 18px;
+  justify-content: space-around;
+}
+.contact-nav li a {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+body {
+  background: black;
+  font-family: "Oswald", sans-serif;
+  font-style: italic;
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%;
+}
+
+.glitch {
+  display: block;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: rgb(223, 191, 191);
+  position: absolute;
+  font-size: 60px;
+  animation: glitch 1s 1.2s infinite;
+}
+.glitch ::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: -5px 0 magenta;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-1 2s linear infinite alternate-reverse, glitch 3s 3.05s infinite;
+}
+.glitch ::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -5px 0 lightgreen;
+  background: black;
+  overflow: hidden;
+  top: 0;
+  animation: noise-2 2s linear infinite alternate-reverse, glitch 1s 2s infinite;
+}/*# sourceMappingURL=Main.css.map */
