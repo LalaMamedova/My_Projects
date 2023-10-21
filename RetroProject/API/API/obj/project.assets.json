@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HomeWorks\\JS\\Project\\API\\API\\API.csproj",
+      "projectUniqueName": "D:\\My Projects\\RetroProject\\API\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\HomeWorks\\JS\\Project\\API\\API\\API.csproj",
+      "projectPath": "D:\\My Projects\\RetroProject\\API\\API\\API.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\HomeWorks\\JS\\Project\\API\\API\\obj\\",
+      "outputPath": "D:\\My Projects\\RetroProject\\API\\API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

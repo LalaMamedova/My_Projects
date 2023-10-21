@@ -127,48 +127,6 @@ header .title {
   font-size: 50px;
 }
 
-.contacts {
-  display: flex;
-  text-align: center;
-  position: absolute;
-  flex-direction: column;
-  flex-wrap: wrap;
-  transition: all 0.5s ease;
-}
-.contacts ol {
-  display: flex;
-  text-align: center;
-  position: relative;
-  flex-wrap: wrap;
-  margin: 25px;
-}
-.contacts ol li {
-  padding: 40px;
-  display: inline;
-  list-style: none;
-}
-.contacts ol li p {
-  display: block;
-  flex-wrap: wrap;
-  word-wrap: break-word;
-  line-height: 1.5;
-  font-size: 35px;
-  max-width: 100%;
-  padding-bottom: 50px;
-}
-.contacts ol li p a {
-  text-decoration: none;
-  color: #d6bd00;
-  margin-left: 5px;
-}
-.contacts ol li p a:active {
-  color: #000;
-}
-.contacts h2 {
-  display: inline;
-  font-size: 50px;
-}
-
 footer {
   background: #f27;
   display: flex;

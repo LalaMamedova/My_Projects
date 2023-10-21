@@ -10,6 +10,7 @@ $background-color_1: #ff003b;
 $background-color_2: #f27;
 $background-color_3: transparent;
 
+
 .about-us-button {
 	display: inline-block;
 	padding: 10px 20px;
@@ -19,12 +20,14 @@ $background-color_3: transparent;
 		background-color: $background-color_1;
 	}
 }
-* {
+
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	text-align: center;
 }
+
 body {
 	background: linear-gradient(90deg, #ff1f1f, #b300c3);
 	color: $color_1;
@@ -98,6 +101,7 @@ header {
 		}
 	}
 }
+
 .privacy {
 	display: inline;
 	text-align: center;
@@ -136,47 +140,49 @@ header {
 		font-size: 50px;
 	}
 }
-.contacts {
-	display: flex;
-	text-align: center;
-	position: absolute;
-	flex-direction: column;
-	flex-wrap: wrap;
-	transition: all 0.5s ease;
-	ol {
-		display: flex;
-		text-align: center;
-		position: relative;
-		flex-wrap: wrap;
-		margin: 25px;
-		li {
-			padding: 40px;
-			display: inline;
-			list-style: none;
-			p {
-				display: block;
-				flex-wrap: wrap;
-				word-wrap: break-word;
-				line-height: 1.5;
-				font-size: 35px;
-				max-width: 100%;
-				padding-bottom: 50px;
-				a {
-					text-decoration: none;
-					color: $color_3;
-					margin-left: 5px;
-					&:active {
-						color: $color_4;
-					}
-				}
-			}
-		}
-	}
-	h2 {
-		display: inline;
-		font-size: 50px;
-	}
-}
+
+// .contacts {
+// 	display: flex;
+// 	text-align: center;
+// 	position: absolute;
+// 	flex-direction: column;
+// 	flex-wrap: wrap;
+// 	transition: all 0.5s ease;
+// 	ol {
+// 		display: flex;
+// 		text-align: center;
+// 		position: relative;
+// 		flex-wrap: wrap;
+// 		margin: 25px;
+// 		li {
+// 			padding: 40px;
+// 			display: inline;
+// 			list-style: none;
+// 			p {
+// 				display: block;
+// 				flex-wrap: wrap;
+// 				word-wrap: break-word;
+// 				line-height: 1.5;
+// 				font-size: 35px;
+// 				max-width: 100%;
+// 				padding-bottom: 50px;
+// 				a {
+// 					text-decoration: none;
+// 					color: $color_3;
+// 					margin-left: 5px;
+// 					&:active {
+// 						color: $color_4;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	h2 {
+// 		display: inline;
+// 		font-size: 50px;
+// 	}
+// }
+
 footer {
 	background: #f27;
 	display: flex;
