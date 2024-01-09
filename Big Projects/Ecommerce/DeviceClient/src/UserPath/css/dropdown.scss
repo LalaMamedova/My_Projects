@@ -1,0 +1,62 @@
+@import url(navbar.css);
+
+span{
+  cursor: pointer;
+}
+
+.catalog-menu {
+  position: relative;
+  display: inline-block;
+  background-color: #2E2E76;
+  border-radius: 10px;
+  padding: 10px 0px;
+  min-width: 400px;
+  z-index: 999;
+  right: 120px;
+
+  ul {
+    position: relative;
+    list-style: none;
+    display: block;
+    text-align: left;
+    font-size: 25px;
+    
+    li {
+      display: flex;
+      position: relative;
+      margin: 10px 0px;
+      
+      .category-name{
+        border-bottom: 1px solid white;
+      }
+      .category-icon{
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+      }
+     
+    }
+  }
+  
+  .subcategory-ul {  
+    position: absolute;
+    left: 90%;
+    top:-20px;
+    
+    div{
+      background-color: #2E2E76;
+      width: 200px;
+      padding: 10px;
+      border: 1px solid white;
+
+      span {
+        position: relative;
+        display: block;
+      }
+    
+    }
+    
+  }
+}
+
+

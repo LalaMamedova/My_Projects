@@ -1,0 +1,17 @@
+.chars-list {
+  color: #ffffff;
+  text-align: center;
+}
+.chars-list input {
+  color: white;
+  font-size: 25px;
+  width: 100%;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #2d272c;
+}
+.chars-list .row {
+  background-color: #5d5d5d;
+  border-radius: 10px;
+  height: 45px;
+}/*# sourceMappingURL=brands.css.map */

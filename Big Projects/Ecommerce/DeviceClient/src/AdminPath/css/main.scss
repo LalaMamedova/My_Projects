@@ -1,0 +1,88 @@
+@import url(buttons.css);
+@import url(addcategory.css);
+@import url(addproduct.css);
+
+legend{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #A3A3FF;
+}
+.hr{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    border-top: 2px solid rgb(224, 224, 224);
+    margin: 15px 0px;
+}
+
+.left-side{
+    position: relative;
+    display: inline-block;
+    background-color: #0b0b0b;
+    min-height: 100vh; 
+    width: 250px;
+
+
+    .admin-info-div{
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        
+        img{
+            position: relative;
+            width: 70%;
+            height: 150px;
+        }
+    }
+    .buttons{
+        position: relative;
+        display: block;        
+    }
+}
+
+.center-admin-side{
+    background-color: #0b0b0b;
+    
+    .center-side-container{
+        position: relative;
+    }
+
+    :last-child{
+        margin-bottom: 20px ;
+    }
+}
+
+.choice-img-div{
+    position: relative;
+    margin: 0px;
+    width: 140px;
+    height: 140px;
+    button{
+        position: absolute;
+        background-color: #373539;
+        color: white;
+        text-align: center;
+        border: 0;
+        left: 100px;
+        height: 30px;
+        width: 30px;
+        font-size: 18px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    img{
+     width: 120px;
+     height: 120px;
+     border-radius: 15px;
+     margin: 0px 10px;
+     background-color: #373539;
+    }
+    
+  
+}
+
+
+@media screen and (max-width:720px) {
+    
+}

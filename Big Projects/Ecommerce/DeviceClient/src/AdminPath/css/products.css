@@ -1,0 +1,9 @@
+@import url(buttons.css);
+.page-item .page-link {
+  background-color: rgb(232, 150, 255);
+}
+
+.page-item.active .page-link {
+  background-color: #3c0f49;
+  border-color: #3c0f49;
+}/*# sourceMappingURL=products.css.map */

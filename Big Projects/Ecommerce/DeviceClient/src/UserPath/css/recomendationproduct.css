@@ -1,0 +1,15 @@
+.recomendation-div {
+  position: relative;
+  background-color: #131313;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+.recomendation-div img {
+  position: relative;
+  width: 100px;
+  height: 90%;
+  border-radius: 10px;
+}/*# sourceMappingURL=recomendationproduct.css.map */

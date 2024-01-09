@@ -1,0 +1,53 @@
+@import url(buttons.css);
+.items-list-div {
+  text-align: center;
+  justify-content: center;
+}
+.items-list-div .card {
+  position: relative;
+  align-items: center;
+  background-color: #5d5d5d;
+  width: 30%;
+  height: 200px;
+  margin: 5px 5px;
+}
+.items-list-div .card img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.chars-list {
+  color: #2d272c;
+}
+
+.redact-div {
+  position: relative;
+  width: 90%;
+  left: 5%;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+.redact-div span {
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  font-size: 20px;
+  color: black;
+}
+.redact-div input {
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: #2d272c;
+  margin: 10px 0;
+}
+.redact-div .submit-btn {
+  border: 0;
+  background-color: transparent;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}/*# sourceMappingURL=categories.css.map */

@@ -1,0 +1,86 @@
+$background-color_1: #dfdfff;
+@import url(buttons.css);
+
+.device-list{
+    color: #F4F5F2;
+    
+    .card{
+        margin: 15px 15px;
+        background-color: #2E2E76;
+        height: 440px;
+        width: 30%;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 10px 10px 3px 0px black;
+
+        span{
+            color: #DF81FF;
+        }
+        
+        .wish-list{
+            position: absolute;
+            right: 5px;
+            top: 0px;
+            z-index: 99;
+            cursor: pointer;
+            font-size: 20px;
+            color: #A3A3FF;
+            transition: color 0.5s ease-in-out;
+
+            :hover{
+                color: #ff5c5c;
+
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #to-basket-btn{
+            position: absolute;
+            bottom: 10px;
+            align-self: center;
+            font-size: 22px;
+
+            cursor: pointer;
+            i{
+                font-size: 25px;
+            }
+
+           
+        }
+    }
+}
+
+
+.custom-image-gallery-item {
+	position: relative;
+	width: 100%;
+	height: 45%;
+    overflow: hidden;
+	img {
+		width: 100%;
+		height: 350px;
+		object-fit: cover;
+	}
+}
+.custom-gallery-field {
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 8px;
+	border-radius: 4px;
+
+    button{
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+        color: black;
+        background-color: $background-color_1;
+    }
+}

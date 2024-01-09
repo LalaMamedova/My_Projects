@@ -1,0 +1,9 @@
+.purchase-container {
+  background-color: rgb(18, 18, 18);
+  padding: 20px;
+}
+.purchase-container .purchase-div {
+  width: 350px;
+  height: 350px;
+  display: flex;
+}/*# sourceMappingURL=purchase.css.map */

@@ -1,0 +1,36 @@
+.input-in-center{
+    position: relative;
+    left: 10%;
+
+    input,select{
+        background-color: #373539;
+        color: white;
+        font-size: 22px;
+        border-radius: 10px;
+        margin-right: 10px;
+        text-align: center;
+        width: 70%;
+
+    }
+
+    select{
+        position: relative;
+        height: 40px;
+    }
+
+}
+.add-category-div{
+    display: none;
+}
+
+.chars-div{
+    .add-btn{
+        position: relative;
+        left: 35%;
+        font-size: 25px;
+    }
+    :last-child{
+        margin-bottom: 20px;
+    }
+}
+

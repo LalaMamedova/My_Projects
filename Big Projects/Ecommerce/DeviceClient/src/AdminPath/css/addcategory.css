@@ -1,0 +1,30 @@
+.input-in-center {
+  position: relative;
+  left: 10%;
+}
+.input-in-center input, .input-in-center select {
+  background-color: #373539;
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-right: 10px;
+  text-align: center;
+  width: 70%;
+}
+.input-in-center select {
+  position: relative;
+  height: 40px;
+}
+
+.add-category-div {
+  display: none;
+}
+
+.chars-div .add-btn {
+  position: relative;
+  left: 35%;
+  font-size: 25px;
+}
+.chars-div :last-child {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=addcategory.css.map */

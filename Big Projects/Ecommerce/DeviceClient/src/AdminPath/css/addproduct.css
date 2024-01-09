@@ -1,0 +1,67 @@
+.center-side-container {
+  position: relative;
+}
+.center-side-container fieldset {
+  position: relative;
+  margin: 0px 10%;
+}
+
+.centeresed-div,
+.select-div {
+  position: relative;
+}
+.centeresed-div select, .centeresed-div input,
+.select-div select,
+.select-div input {
+  background-color: #373539;
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+  text-align: center;
+}
+.centeresed-div select,
+.select-div select {
+  width: 300px;
+  margin-right: 10px;
+}
+.centeresed-div input,
+.select-div input {
+  width: 40%;
+}
+.centeresed-div .add-img-div,
+.select-div .add-img-div {
+  background-color: #373539;
+  border: 1px dashed white;
+  justify-content: center;
+  padding: 50px 0px;
+  cursor: pointer;
+}
+.centeresed-div .add-img-div img,
+.select-div .add-img-div img {
+  width: 220px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
+.centeresed-div .add-img-div button,
+.select-div .add-img-div button {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+  left: 10px;
+  height: 20px;
+  width: 220px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.centeresed-div {
+  margin: 0px 10%;
+}
+.centeresed-div input {
+  width: 40%;
+  height: 40px;
+}
+.centeresed-div h3 {
+  color: #A3A3FF;
+}/*# sourceMappingURL=addproduct.css.map */

@@ -1,0 +1,16 @@
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\bin\Debug\net8.0\DeviceApp.deps.json
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\bin\Debug\net8.0\DeviceApp.dll
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\bin\Debug\net8.0\DeviceApp.pdb
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\bin\Debug\net8.0\EcommerceLib.dll
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\bin\Debug\net8.0\EcommerceLib.pdb
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.csproj.AssemblyReference.cache
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.AssemblyInfoInputs.cache
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.AssemblyInfo.cs
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.csproj.CoreCompileInputs.cache
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.sourcelink.json
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.csproj.CopyComplete
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.dll
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\refint\DeviceApp.dll
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\DeviceApp.pdb
+D:\My Projects\Big Projects\Ecommerce\DeviceApp\obj\Debug\net8.0\ref\DeviceApp.dll

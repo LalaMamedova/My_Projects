@@ -1,0 +1,71 @@
+.left-side-btns {
+  border: 0;
+  margin: 5px 0px;
+  font-weight: bolder;
+  font-size: 22px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.left-side-btns:hover {
+  color: #A3A3FF;
+}
+
+.add-btn,
+.remove-btn,
+.edit-btn {
+  background-color: transparent;
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+  font-size: 20px;
+  border: 0;
+}
+
+.add-btn {
+  color: rgb(82, 255, 82);
+}
+
+.remove-btn {
+  color: rgb(255, 82, 82);
+}
+
+.edit-btn {
+  color: rgb(242, 255, 99);
+}
+
+.upload-img {
+  background-color: #5B5BB0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  height: 45px;
+  width: 130px;
+  text-align: center;
+  transition: background-color ease-in-out 0.5s;
+}
+.upload-img:hover {
+  background-color: rgba(91, 91, 176, 0.7294117647);
+}
+.upload-img:active {
+  box-shadow: inset -4px -4px 1px #bcbcff, inset 5px 5px 1px #2b2b7b;
+}
+
+.submit-post-btn {
+  position: relative;
+  background-color: #C192FF;
+  font-size: 28px;
+  border: 0px;
+  border-radius: 10px;
+  left: calc(50% - 110px);
+  bottom: -20px;
+  width: 220px;
+  text-align: center;
+  align-items: center;
+  color: white;
+  box-shadow: inset 5px 2px 1px rgba(86, 51, 132, 0.9411764706), 6px 2px 0px 1px #fbbcff;
+}
+.submit-post-btn:hover {
+  box-shadow: -3px -2px 1px rgba(193, 146, 255, 0.5450980392), 3px 2px 1px rgba(251, 188, 255, 0.7490196078);
+  background-color: rgba(193, 146, 255, 0.8431372549);
+}/*# sourceMappingURL=buttons.css.map */

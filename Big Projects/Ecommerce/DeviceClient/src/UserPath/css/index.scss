@@ -1,0 +1,20 @@
+$color1:rgb(163, 163, 255);
+@font-face {
+    font-family: 'Caviar dream';
+    src: url(/src/assets/fronts/caviar-dreams.ttf)
+}
+body, main{
+    background-color: #201e22;
+    color: white;
+    margin: 0px;
+    font-family: 'Caviar dream';
+}
+
+.breadcrumb{
+    background-color: #141414;
+    .breadcrumb-item{
+        a{
+            color:white;
+        }
+    }
+}

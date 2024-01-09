@@ -1,0 +1,15 @@
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\bin\Debug\net8.0\EcommerceLib.deps.json
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\bin\Debug\net8.0\EcommerceLib.runtimeconfig.json
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\bin\Debug\net8.0\EcommerceLib.dll
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\bin\Debug\net8.0\EcommerceLib.pdb
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.csproj.AssemblyReference.cache
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.AssemblyInfoInputs.cache
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.AssemblyInfo.cs
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.csproj.CoreCompileInputs.cache
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.sourcelink.json
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.dll
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\refint\EcommerceLib.dll
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.pdb
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\EcommerceLib.genruntimeconfig.cache
+D:\My Projects\Big Projects\Ecommerce\EcommerceLib\obj\Debug\net8.0\ref\EcommerceLib.dll
