@@ -1,0 +1,156 @@
+@import url(/Scss/Addons.css);
+@import url(/Scss/Animation.css);
+$color_1: black;
+$color_2: rgba(0, 0, 0, 0.758);
+$color_3: transparent;
+$color_4: white;
+$color_5: rgb(113, 255, 243);
+$color_6: rgb(125, 78, 255);
+$color_7: rgb(255, 255, 255);
+$font-family_1: "Disko teque";
+$font-family_2: "Handjet";
+$background-color_1: pink;
+$animation-delay: 0.1s;
+
+.main-header-div {
+	display: flex;
+	background-image: url("../Assets/Img/Caset.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	border: 3px solid black;
+	height: 120px;
+	-webkit-animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-in-left 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation-delay: $animation-delay;
+}
+
+
+.logo-nav,#loader-logo {
+	font-family: $font-family_1;
+	position: relative;
+	margin: 0;
+	width: 300px;
+	h1 {
+		margin: 0;
+		a {
+			color: $color_2;
+			font-size: 60px;
+			text-decoration: none;
+			justify-content: space-between;
+			display: flex;
+			font-weight: bold;
+			transition: all ease-in 0.4s;
+		
+			&:hover {
+				background: linear-gradient(to bottom, #ff0000, #3300ff);
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: $color_3;
+				text-decoration: none;
+				font-size: 70px;
+				margin-left: 20px;
+			}
+		}
+	}
+
+}
+
+.auto-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-left: auto;
+	margin-top: 5px;
+}
+
+
+.bottons-div {
+	a {
+		text-align: none;
+		color: $color_1;
+	}
+}
+.music-bar {
+	display: flex;
+	position: absolute;
+	align-self: flex-end;
+	margin-left: 45%;
+	margin-bottom: 5px;
+}
+
+#tech-card,
+.tech-card{
+	position: relative;
+	max-height: 780px;
+	min-height: 770px;
+	width: 32%;
+	margin: 30px 20px;
+	padding: 50px;
+	border: 5px solid #ffffff;
+	font-size: 30px;
+	border-radius: 5%;
+	box-shadow: 20px 20px 0px 0px black;
+	color: $color_4;
+	text-align: center;
+	font-family: $font-family_2;
+	background: linear-gradient(135deg, #1e38ff, #ff78c7);
+	-webkit-animation: swing-in-bottom-fwd 2.0s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+	        animation: swing-in-bottom-fwd 2.0s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+		    animation-delay: $animation-delay;
+
+	img {
+		display: flex;
+		border-radius: 5%;
+		width: 100%;
+		height: 45%;
+	}
+	h1,h2,h3,h4,h5,h6,p{
+		text-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	h6 {
+		font-size: 20px;
+	}
+
+	#tech-fact{
+		color: lightblue;
+	}
+	p {
+		font-size: 22px;
+		-webkit-line-clamp: 3;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		color: $color_4;
+		font-weight: bolder;
+	}
+}
+.tech-card-buttons {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	margin-top: 15px;
+	button {
+		margin-right: 15px;
+	}
+}
+.to-full-info-div {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	color: cyan;
+	margin-top: 15px;
+}
+
+.interest-fact {
+	span {
+		font-size: 22px;
+		-webkit-line-clamp: 2;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		color: $color_5;
+		font-weight: bolder;
+	}
+}
