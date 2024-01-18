@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeviceApp.Repo.Classes;
 
-public class BrandRepository 
+public class BrandRepository : IRepository
 {
-    private readonly IRepository<Brand,BrandDto> _repository;
-    public BrandRepository(IRepository<Brand,BrandDto> repository)
+    private readonly IGenericRepository<Brand,BrandDto> _repository;
+    public BrandRepository(IGenericRepository<Brand,BrandDto> repository)
     {
         _repository = repository;
     }

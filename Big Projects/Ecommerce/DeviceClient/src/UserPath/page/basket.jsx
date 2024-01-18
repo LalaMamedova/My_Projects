@@ -3,7 +3,7 @@ import { Context } from "../..";
 import { observer } from "mobx-react-lite";
 import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { MAIN_PAGE, PURCHASE } from "../utilits/constPath";
+import { MAIN_PAGE, PURCHASE, PURCHASED_PRODUCTS } from "../utilits/constPath";
 import PurchaseProducts from "../components/modals/PurchaseProducts";
 import ProductPrice from "../components/modals/ProductPrice";
 
@@ -26,7 +26,7 @@ const Basket = observer(() => {
         <Row className="col-12">
 
           <Col className="text-center">
-            <button id="product-info-btn" onClick={()=>navigation()}>
+            <button id="product-info-btn" onClick={()=>navigation(PURCHASED_PRODUCTS)}>
             <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
               {" Purchased Products"}
               </button>

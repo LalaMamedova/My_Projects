@@ -24,11 +24,11 @@ public class PurchaseProductController:ControllerBase
         return Ok(response);    
     }
 
-    [HttpPost("GetAll/{userId}")]
+    [HttpGet("GetAll/{userId}")]
     [Authorize]
     public async Task<IActionResult> GetAll(string userId)
     {
-        var response = await _purchaseProductRepository.GetAllAsync( userId);
+        var response = await _purchaseProductRepository.GetAllAsync(userId);
         return Ok(response);
     }
 }

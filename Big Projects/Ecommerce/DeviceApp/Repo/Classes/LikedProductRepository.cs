@@ -9,14 +9,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeviceApp.Repo.Classes;
 
-public class LikedProductRepository
+public class LikedProductRepository: IRepository
 {
-    readonly IRepository<UserLikedProduct, UserLikedProductDto> _repository;
+    readonly IGenericRepository<UserLikedProduct, UserLikedProductDto> _repository;
     private readonly UserManager<AppUser> _userManager;
     private readonly ICacheService _cacheService;
     private readonly IMapper _mapper;
 
-    public LikedProductRepository(IRepository<UserLikedProduct, UserLikedProductDto> repository, UserManager<AppUser> userManager, ICacheService cacheService, IMapper mapper)
+    public LikedProductRepository(IGenericRepository<UserLikedProduct, UserLikedProductDto> repository, UserManager<AppUser> userManager, ICacheService cacheService, IMapper mapper)
     {
         _repository = repository;
         _userManager = userManager;

@@ -124,7 +124,7 @@ public class Startup
         services.AddDbContext<DeviceDbContext>(options =>{options.UseSqlServer(_configuration["DbConnection:DeviceDbConnection"]);});
         services.AddDbContext<UserDbContext>(options =>{options.UseSqlServer(_configuration["DbConnection:DeviceDbConnection"]);});
 
-        services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
+        services.AddScoped(typeof(IGenericRepository<,>), typeof(Repository<,>));
 
         services.AddScoped<ProductRepository>();
         services.AddScoped<BrandRepository>();
@@ -133,6 +133,8 @@ public class Startup
         services.AddScoped<ReviewRepository>();
         services.AddScoped<LikedProductRepository>();
         services.AddScoped<PurchasedProductRepository>();
+        services.AddScoped<CharacteristicRepository>();
+
 
         services.AddScoped<ICreateTokenService, CreateTokenService>();
         services.AddScoped<IRefreshTokenService, RefreshTokenService>();

@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeviceApp.Repo.Classes;
 
-public class PurchasedProductRepository
+public class PurchasedProductRepository: IRepository
 {
-    private readonly IRepository<PurchasedProduct, PurchasedProductDto> _repository;
+    private readonly IGenericRepository<PurchasedProduct, PurchasedProductDto> _repository;
     private readonly UserManager<AppUser> _userManager;
-    public PurchasedProductRepository(IRepository<PurchasedProduct, PurchasedProductDto> repository, UserManager<AppUser> userManager)
+    public PurchasedProductRepository(IGenericRepository<PurchasedProduct, PurchasedProductDto> repository, UserManager<AppUser> userManager)
     {
         _repository = repository;
         _userManager = userManager;

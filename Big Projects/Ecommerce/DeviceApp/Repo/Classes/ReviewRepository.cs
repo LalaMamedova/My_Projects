@@ -7,11 +7,11 @@ using EcommerceLib.Models.ProductModel;
 
 namespace DeviceApp.Repo.Classes;
 
-public class ReviewRepository
+public class ReviewRepository: IRepository
 {
-    private readonly IRepository<Review, ReviewDto> _repository;
+    private readonly IGenericRepository<Review, ReviewDto> _repository;
 
-    public ReviewRepository(IRepository<Review, ReviewDto> repository )
+    public ReviewRepository(IGenericRepository<Review, ReviewDto> repository )
     {
         _repository = repository;
     }

@@ -54,3 +54,25 @@ export const loginPost = async (user) => {
     }
   };
   
+  export const getUserAllPurchasedProducts = async (userId) => {
+    var token = localStorage.getItem("authToken")
+
+    try {
+      const response = await fetch(`https://localhost:7284/api/v1/PurchaseProduct/GetAll/${userId}`, {
+        method: 'GET',   
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer  ${token}` 
+        },   
+      });
+
+      if(!response.ok){
+        throw JSON.stringify(await response);
+      }
+      return await response.json();
+      
+    } catch (error) {
+      throw error; 
+    }
+  };
+  

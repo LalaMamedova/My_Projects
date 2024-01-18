@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Query;
 using System.Linq.Expressions;
 namespace DeviceApp.Repo.General;
 
-public class Repository<T, T2> : IRepository<T, T2> where T : class
+public class Repository<T, T2> : IGenericRepository<T, T2> where T : class
 {
     private readonly DeviceDbContext _dbContext;
     private readonly DbSet<T> _dbSet;

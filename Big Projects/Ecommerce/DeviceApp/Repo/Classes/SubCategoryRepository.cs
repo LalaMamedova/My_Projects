@@ -9,10 +9,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeviceApp.Repo.Classes;
 
-public class SubCategoryRepository 
+public class SubCategoryRepository : IRepository
 {
-    IRepository<SubCategory, SubCategoryDto> _repository;
-    public SubCategoryRepository(IRepository<SubCategory, SubCategoryDto> repository)
+    IGenericRepository<SubCategory, SubCategoryDto> _repository;
+    public SubCategoryRepository(IGenericRepository<SubCategory, SubCategoryDto> repository)
     {
         _repository = repository;
     }

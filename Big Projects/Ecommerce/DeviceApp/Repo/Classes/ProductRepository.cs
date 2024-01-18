@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeviceApp.Repo.Classes;
 
-public class ProductRepository
+public class ProductRepository: IRepository
 {
-    private readonly IRepository<Product, ProductDto> _repository;
+    private readonly IGenericRepository<Product, ProductDto> _repository;
     private readonly ICacheService _cacheService;
     private readonly IMapper _mapper;
     private readonly PageList<Product> pageList;
     private readonly string redisKey = "products";
-    public ProductRepository(IRepository<Product, ProductDto> repository,
+    public ProductRepository(IGenericRepository<Product, ProductDto> repository,
                              ICacheService cacheService, IMapper mapper)
     {
         _repository = repository;

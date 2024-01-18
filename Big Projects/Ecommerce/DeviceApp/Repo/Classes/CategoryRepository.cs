@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DeviceApp.Repo.Classes;
 
-public class CategoryRepository
+public class CategoryRepository: IRepository
 {
-    private readonly IRepository<Category, CategoryDto> _repository;
-    public CategoryRepository(IRepository<Category, CategoryDto> repository)
+    private readonly IGenericRepository<Category, CategoryDto> _repository;
+    public CategoryRepository(IGenericRepository<Category, CategoryDto> repository)
     {
         _repository = repository;
     }
