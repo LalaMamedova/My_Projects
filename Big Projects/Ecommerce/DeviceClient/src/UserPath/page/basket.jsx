@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Context } from "../..";
 import { observer } from "mobx-react-lite";
-import { Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { MAIN_PAGE, PURCHASE } from "../utilits/constPath";
 import PurchaseProducts from "../components/modals/PurchaseProducts";
@@ -24,6 +24,14 @@ const Basket = observer(() => {
     return (
       <Container className="d-flex mt-4">
         <Row className="col-12">
+
+          <Col className="text-center">
+            <button id="product-info-btn" onClick={()=>navigation()}>
+            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+              {" Purchased Products"}
+              </button>
+          </Col>
+
           {user.basket && user.basket.length > 0 ? (
             <div className="d-block col-12">
               {user.basket.map(device => (

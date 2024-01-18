@@ -28,9 +28,9 @@ public class UserDbContext : IdentityDbContext<AppUser>
         modelBuilder.Entity<Review>().ToTable("Reviews");
         modelBuilder.Entity<UserLikedProduct>().ToTable("UserLikedProducts");
         modelBuilder.Entity<PurchasedProduct>().ToTable("PurchasedProducts");
-
-
-
+        modelBuilder.Entity<Product>().ToTable("Products");
+        modelBuilder.Entity<ProductsImg>().ToTable("ProductImages");
+        modelBuilder.Entity<Product>().Ignore(x=>x.Count);
 
     }
 }

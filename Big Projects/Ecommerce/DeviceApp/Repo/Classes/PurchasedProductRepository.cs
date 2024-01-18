@@ -41,6 +41,8 @@ public class PurchasedProductRepository
     
         var usersPurchasedProducts = await _userManager.Users
              .Include(x => x.PurchasedProducts)
+             .ThenInclude(x=>x.Product)
+             .ThenInclude(x=>x.ProductsImg)
              .FirstOrDefaultAsync(x => x.Id == userId);
 
         return usersPurchasedProducts.PurchasedProducts;

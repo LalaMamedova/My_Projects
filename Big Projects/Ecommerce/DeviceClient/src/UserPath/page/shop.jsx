@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Container, Pagination, Row } from "react-bootstrap";
+import { Col, Container, Pagination, Row } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 import { Context } from "../..";
 import ProductList from "../components/ProductList";
 import "react-image-gallery/styles/css/image-gallery.css";
+import ProductFilter from "../components/ProductFilter";
 
 const Shop = observer(() => {
    
@@ -31,10 +32,32 @@ const Shop = observer(() => {
 
 
     return (
-        <Container>
-          <h2 className="text-center mt-2">{userProduct.selectedCategory}</h2> 
+        <div>
+          <h2 className="text-center mt-2">
+            {userProduct.selectedCategory !==null 
+            ? userProduct.selectedCategory.name
+            :userProduct.selectedSubCategory.name}
+          </h2> 
+          
+          <Col>
+          {
+            <Row>
+              {
+                userProduct.selectedCategory !==null ?
+                userProduct.selectedCategory.subCategories.map(subcategory=>(
 
-          <ProductList products={userProduct.product} categoryName = {userProduct.selectedCategory}></ProductList>
+                  <ProductFilter categoryCharacteristics={subcategory.characteristics}></ProductFilter>
+                  ))
+                  :
+                  <ProductFilter categoryCharacteristics={ userProduct.selectedSubCategory.characteristics}></ProductFilter>
+              }
+            </Row>
+          }
+          <ProductList products={userProduct.product} categoryName =   {userProduct.selectedCategory !==null 
+            ? userProduct.selectedCategory.name
+            :userProduct.selectedSubCategory.name}/>
+          </Col>
+
             <Row className="mt-5" style={{justifyContent:"center"}}>
                 <Pagination activePage={userProduct.currentPage} 
                 itemsCountPerPage={itemTakeCount} 
@@ -42,7 +65,7 @@ const Shop = observer(() => {
                 {renderPaginationItems()}
                 </Pagination>
           </Row>
-        </Container>
+        </div>
     )
 });
 export default Shop;

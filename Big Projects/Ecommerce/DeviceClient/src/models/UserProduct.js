@@ -9,6 +9,7 @@ export default class Product{
         this._brand = [];
         this._selectedProduct = {};
         this._selectedCategory = {};
+        this._selectedSubCategory = {};
         this._recomendationProducts= [];
         this._totalSum = 1;
         this._currentPage = 1;
@@ -58,7 +59,9 @@ export default class Product{
     setSelectedCategory(category){
         this._selectedCategory = category;
     }
-   
+    setSelectedSubCategory(category){
+        this._selectedSubCategory = category;
+    }
 
     get currentPage(){
         return this._currentPage;
@@ -90,5 +93,8 @@ export default class Product{
    
     get selectedCategory(){
         return this._selectedCategory;
+    }
+    get selectedSubCategory(){
+        return this._selectedSubCategory;
     }
 }

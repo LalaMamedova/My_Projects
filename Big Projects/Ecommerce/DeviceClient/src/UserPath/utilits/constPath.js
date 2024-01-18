@@ -6,4 +6,4 @@ export const PRODUCT = "/product"
 export const BASKET = "/basket"
 export const PURCHASE = "/purchase"
 export const LIKEDPRODUCTS = "/likedproducts"
-
+export const PURCHASED_PRODUCTS = "/purchased-products"
