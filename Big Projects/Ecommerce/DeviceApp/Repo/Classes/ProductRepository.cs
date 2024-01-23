@@ -77,7 +77,7 @@ public class ProductRepository: IRepository
     public async Task<IEnumerable<Product>> GetRecomendation(int categoryId, int productId, IEnumerable<int> viewedProducts)
     {
         var allProducts = await _repository.GetAllAsync(filter: x => x.SubCategory.CategoryId == categoryId && x.Id != productId,
-                                                        include: source => source.Include(x => x.ProductsImg));
+                                                        include: x => x.Include(x => x.ProductsImg));
 
         var notViewedProducts = allProducts.Where(x => !viewedProducts.Contains(x.Id));
         var pagedProduct = pageList.Get(notViewedProducts.ToList(), 1, 5);

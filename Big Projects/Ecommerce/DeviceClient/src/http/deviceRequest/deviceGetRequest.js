@@ -99,6 +99,26 @@ export const getProductsById = async (id) => {
     }
 };
 
+export const getCharsValue = async (id) => {
+    try {
+        var response = await fetch(`https://localhost:7284/api/v1/ProductСharacteristic/Get/${id}`);
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        return response;
+
+    }
+};
+export const getCharsByPrice = async (categoryId) => {
+    try {
+        var response = await fetch(`https://localhost:7284/api/v1/SubCategory/GetByPrice/${categoryId}`);
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        return response;
+
+    }
+};
 
 export const getСategoryById = async (id) => {
 
@@ -121,9 +141,6 @@ export const getSubСategoryById = async (id) => {
     return response;
   }
 };
-
-
-
 
 export const getNewestProducts = async () => {
     try {

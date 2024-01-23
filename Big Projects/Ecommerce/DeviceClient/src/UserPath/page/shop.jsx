@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Col, Container, Pagination, Row } from "react-bootstrap";
+import { Col, Pagination, Row } from "react-bootstrap";
 import { observer } from "mobx-react-lite";
 import { Context } from "../..";
 import ProductList from "../components/ProductList";
-import "react-image-gallery/styles/css/image-gallery.css";
 import ProductFilter from "../components/ProductFilter";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 const Shop = observer(() => {
    
@@ -30,6 +30,7 @@ const Shop = observer(() => {
         return paginationItems;
       };
 
+    
 
     return (
         <div>
@@ -39,32 +40,35 @@ const Shop = observer(() => {
             :userProduct.selectedSubCategory.name}
           </h2> 
           
-          <Col>
+          <Row>
           {
-            <Row>
+            <Col>
               {
                 userProduct.selectedCategory !==null ?
                 userProduct.selectedCategory.subCategories.map(subcategory=>(
 
-                  <ProductFilter categoryCharacteristics={subcategory.characteristics}></ProductFilter>
-                  ))
+                  <ProductFilter categoryCharacteristics={subcategory.characteristics} 
+                  categoryId = {userProduct.selectedCategory.id}/>))
                   :
-                  <ProductFilter categoryCharacteristics={ userProduct.selectedSubCategory.characteristics}></ProductFilter>
+                  <ProductFilter categoryCharacteristics={ userProduct.selectedSubCategory.characteristics}
+                  categoryId = { userProduct.selectedSubCategory.categoryId}/>
               }
-            </Row>
+            </Col>
           }
-          <ProductList products={userProduct.product} categoryName =   {userProduct.selectedCategory !==null 
+          <ProductList products={userProduct.product} categoryName = {userProduct.selectedCategory !==null 
             ? userProduct.selectedCategory.name
-            :userProduct.selectedSubCategory.name}/>
-          </Col>
+            :userProduct.selectedSubCategory.name}
+          />
 
-            <Row className="mt-5" style={{justifyContent:"center"}}>
+          </Row>
+
+            <div className="mt-5 d-flex" style={{justifyContent:"center"}}>
                 <Pagination activePage={userProduct.currentPage} 
                 itemsCountPerPage={itemTakeCount} 
                 totalItemsCount={userProduct.totalItems}>
                 {renderPaginationItems()}
                 </Pagination>
-          </Row>
+          </div>
         </div>
     )
 });

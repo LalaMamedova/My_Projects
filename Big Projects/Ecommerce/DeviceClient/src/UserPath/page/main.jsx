@@ -23,7 +23,6 @@ const MainPage = observer(() => {
       .then((data) => userProduct.setProduct(data.items));
     }
     fetch();
-
   }, []);
 
   async function getCategoryByNameHandler(name){

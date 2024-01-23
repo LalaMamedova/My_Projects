@@ -29,13 +29,13 @@ const CatalogItems = observer((props)=>{
              
             await getСategoryById(category.id)
             .then(data=>userProduct.setSelectedCategory(data))
-            .then(data=>userProduct.setSelectedSubCategory(null))
+            .then(()=>userProduct.setSelectedSubCategory(null))
 
         }else{
             products = await getProductsBySubCategory(category.id,userProduct.currentPage);
             await getSubСategoryById(category.id)
             .then(data=>userProduct.setSelectedSubCategory(data))
-            .then(data=>userProduct.setSelectedCategory(null))
+            .then(()=>userProduct.setSelectedCategory(null))
         }
 
         setPagginations(products);

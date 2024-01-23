@@ -42,8 +42,8 @@ const ProductCard = observer(({device})=>{
     return(
         <Card key={device.id}>
             <span style={{color : likedProductId === 0 ? "#A3A3FF ":"#ff81dd" }} 
-            onClick={()=>removeOrAddHandler(device)} 
-            className="wish-list">
+                onClick={()=>removeOrAddHandler(device)} 
+                className="wish-list">
                 <i className="fa fa-heart"></i>
             </span>
 

@@ -7,7 +7,7 @@ import "../css/shop.css"
 const ProductList = observer(({products})=>{
     
     return (
-        <Container className="device-list mt-4">
+        <Container className="device-list">
             <Row className="d-flex">
             {products && products.length > 0 ? (
                 products.map((device) => (

@@ -133,7 +133,7 @@ public class Startup
         services.AddScoped<ReviewRepository>();
         services.AddScoped<LikedProductRepository>();
         services.AddScoped<PurchasedProductRepository>();
-        services.AddScoped<CharacteristicRepository>();
+        services.AddScoped<ProductСharacteristicRepository>();
 
 
         services.AddScoped<ICreateTokenService, CreateTokenService>();

@@ -41,7 +41,6 @@ public class CategoryRepository: IRepository
         {
             throw new ArgumentNullException(id + " is not found");
         }
-
     }
 
     public async Task<Category> GetByNameAsync(string name)
@@ -90,7 +89,6 @@ public class CategoryRepository: IRepository
 
         }
     }
-
 }
 
 

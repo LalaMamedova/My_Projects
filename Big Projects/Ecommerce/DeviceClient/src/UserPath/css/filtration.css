@@ -1,0 +1,20 @@
+.main-filter-div {
+  width: 300px;
+  padding: 10px;
+}
+.main-filter-div .price-filter {
+  width: 90px;
+}
+.main-filter-div .charValuesName {
+  font-size: 22px;
+  margin: 10px 0px;
+  text-align: left;
+  color: #ffffff;
+  font-weight: bolder;
+}
+.main-filter-div p {
+  color: #c1c1c1;
+}
+.main-filter-div i {
+  color: #DF81FF;
+}/*# sourceMappingURL=filtration.css.map */

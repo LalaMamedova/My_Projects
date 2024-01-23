@@ -7,10 +7,10 @@ import useProductsFunctions from "../../functions/productsFunctions";
 const ProductRecomendations  = ({product})=>{
   
     const {toBasketHandler} = useBasketFunctions();
-    const {selectedProduct} = useProductsFunctions();
+    const {selectedProductHandler} = useProductsFunctions();
 
     return(
-        <Col style={{cursor:"poiner"}} onClick={()=>selectedProduct(product.id)} 
+        <Col style={{cursor:"poiner"}} onClick={()=>selectedProductHandler(product.id)} 
         className="recomendation-div d-flex">
             
             <div  className="d-flex">
@@ -23,11 +23,12 @@ const ProductRecomendations  = ({product})=>{
             <div className="d-block">
                 <span>{product.name}</span>
                 <ProductPrice price={product.price}></ProductPrice>
-                <button onClick={()=>toBasketHandler(product)} 
 
+                <button onClick={()=>toBasketHandler(product)} 
                     id="to-basket-btn" className="shop-card-btn">
                     {"To basket "} <i class="fas fa-shopping-basket"></i>
                 </button>
+                
             </div>
 
             </div>

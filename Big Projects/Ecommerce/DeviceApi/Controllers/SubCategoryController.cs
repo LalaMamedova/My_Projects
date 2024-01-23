@@ -53,7 +53,20 @@ public class SubCategoryController : ControllerBase
             return BadRequest(ex.Message);
         }
     }
-  
+
+    [HttpGet("GetByPrice/{categoryId:int}")]
+    public async Task<IActionResult> GetMaxMinPrice(int categoryId)
+    {
+        try
+        {
+            var values = await _repository.GetMaxMinPriceAsync(categoryId);
+            return Ok(values);
+        }
+        catch (Exception ex)
+        {
+            return NotFound(ex.Message);
+        }
+    }
 
     [HttpGet("Get/{id:int}")]
     public async Task<IActionResult> Get(int id)

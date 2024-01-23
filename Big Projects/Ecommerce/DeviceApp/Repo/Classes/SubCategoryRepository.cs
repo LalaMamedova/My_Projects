@@ -44,6 +44,16 @@ public class SubCategoryRepository : IRepository
         }
 
     }
+    public async Task<Tuple<float, float>> GetMaxMinPriceAsync(int categoryId)
+    {
+        var productPrice = await _repository
+                                            .GetAllAsync(filter:x=>x.CategoryId == categoryId,
+                                                        include:x=>x.Include(x => x.Products));
+
+        var maxPrice = productPrice.SelectMany(x => x.Products).Max(y => y.Price);
+        var minPrice = productPrice.SelectMany(x => x.Products).Min(y => y.Price);
+        return Tuple.Create(minPrice, maxPrice);
+    }
 
     public async Task<IEnumerable<SubCategory>> GetByNameAsync(string name)
     {
