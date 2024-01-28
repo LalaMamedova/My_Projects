@@ -1,0 +1,89 @@
+﻿<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+@using Newtonsoft.Json
+@using TestsLib.Models
+@model Test
+
+<div class="text-light">
+    <h2 class="text-center">@Model.Title</h2>
+
+    <div id="answerOptionsContainer"></div>
+
+    <button class="nextButton">Next!</button>
+
+    <script>
+        var nextQuestionIndex = 1;
+        var currentQuestion = @Html.Raw(Json.Serialize(Model.Questions.ElementAt(0)));
+        var answer = "";
+
+        function setAnswer(value) {
+            answer = value;
+        }
+
+        function updateAnswerOptions(isEnd) {
+            var answerOptionsContainer = document.getElementById("answerOptionsContainer");
+
+            answerOptionsContainer.innerHTML = '';
+
+            if (!isEnd) {
+                var title = document.createElement("p");
+                title.id = "currentQuestionDescription";
+                title.className = "text-center";
+                title.textContent = currentQuestion.questionDescription;
+                answerOptionsContainer.appendChild(title);
+
+                for (let i = 0; i < currentQuestion.choice.length; i++) {
+                    var div = document.createElement("div");
+                    div.classList.add("d-flex");
+
+                    let checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.onclick = function () {
+                        setAnswer(this.value);
+                    };
+                    
+                    checkbox.value = currentQuestion.choice[i];
+
+                    let label = document.createElement("label");
+                    label.classList.add("answer-option");
+                    label.htmlFor = checkbox.value;
+                    label.textContent = currentQuestion.choice[i];
+
+                    div.appendChild(checkbox);
+                    div.appendChild(label);
+                    answerOptionsContainer.appendChild(div);
+                }
+            } else {
+                var end = document.createElement("h2");
+                end.className = "text-center";
+                end.textContent = "Good luck";
+                answerOptionsContainer.appendChild(end);
+            }
+        }
+       
+
+        document.getElementsByClassName("nextButton")[0].addEventListener('click', async function () {
+            const response = await fetch(`/Test/NextQuestion/${nextQuestionIndex}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(@Html.Raw(JsonConvert.SerializeObject(Model))),
+            });
+
+            const responseJson = await response.json();
+
+            if (responseJson !== "End") {
+                currentQuestion = responseJson;
+                updateAnswerOptions(false);
+                answer = "";
+                nextQuestionIndex++;
+            } else {
+                updateAnswerOptions(true);
+            }
+        });
+
+        updateAnswerOptions(false);
+    </script>
+
+
+</div>

@@ -1,0 +1,16 @@
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.AssemblyInfoInputs.cache
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.AssemblyInfo.cs
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.csproj.CoreCompileInputs.cache
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.sourcelink.json
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.csproj.AssemblyReference.cache
+D:\My Projects\Tests\TestsApp\bin\Debug\net8.0\TestsApp.deps.json
+D:\My Projects\Tests\TestsApp\bin\Debug\net8.0\TestsApp.dll
+D:\My Projects\Tests\TestsApp\bin\Debug\net8.0\TestsApp.pdb
+D:\My Projects\Tests\TestsApp\bin\Debug\net8.0\TestsLib.dll
+D:\My Projects\Tests\TestsApp\bin\Debug\net8.0\TestsLib.pdb
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.csproj.CopyComplete
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.dll
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\refint\TestsApp.dll
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\TestsApp.pdb
+D:\My Projects\Tests\TestsApp\obj\Debug\net8.0\ref\TestsApp.dll

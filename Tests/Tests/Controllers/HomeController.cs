@@ -1,33 +1,36 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 using Tests.Models;
+using TestsApp.Services.HttpRequests;
+using TestsLib.Models.UserModels;
 
 namespace Tests.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly HttpClient _httpClient;
-
-        public HomeController(ILogger<HomeController> logger, HttpClient httpClient)
+        private TestRequests _testRequests;
+        public HomeController(TestRequests testRequests)
         {
-            _logger = logger;
-            _httpClient = httpClient;
+            _testRequests = testRequests;
         }
 
         public async Task<IActionResult> Index()
         {
-            HttpResponseMessage response = await _httpClient.GetAsync("https://example.com/api/data");
+            string? userCookieValue = HttpContext.Request.Cookies["User"];
 
-            if (response.IsSuccessStatusCode)
+            if(userCookieValue != null)
             {
-                string data = await response.Content.ReadAsStringAsync();
-                return View(data);
+                HttpContext.Session.SetInt32("User", 1);
             }
-            else
+            IEnumerable<string> response = await _testRequests.GetPopularTags();
+
+            if(response == null)
             {
                 return View("Error");
             }
+            return View(response);
         }
 
         public IActionResult Privacy()

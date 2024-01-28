@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using TestAPI.Repository.ModelReposotry;
-using TestsLib.DbContexts;
+using MongoDB.Bson;
+using TestsApp.Repository.ModelReposotry;
+using TestsLib.Dto;
 using TestsLib.Models;
 
 namespace TestAPİ.Controllers;
@@ -10,23 +11,52 @@ namespace TestAPİ.Controllers;
 [ApiController]
 public class TestController : ControllerBase
 {
-    private readonly TestRepository _repository;
-
+    private readonly TestRepository _testRepository;
     public TestController(TestRepository repository)
     {
-        _repository = repository;
+        _testRepository = repository;
+    }
+
+    [HttpPost("Post")]
+    public async Task<IActionResult> Create([FromBody] TestDto test)
+    {
+        try
+        {
+            await _testRepository.CreateAsync(test);
+            return Ok();
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);  
+        }
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllTest()
+    public async Task<IActionResult> GetAll()
     {
-        return Ok();
+        return Ok(await _testRepository.GetAll());
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Create([FromBody] Test test)
+    [HttpGet("GetById/{id}")]
+    public async Task<IActionResult> GetAll(string id)
     {
-        await _repository.CreateAsync(test);
+        return Ok(await _testRepository.GetById(id));
+    }
+
+    [HttpGet("GetPopularTags")]
+    public async Task<IActionResult> GetPopularTags()
+    {
+        return Ok(await _testRepository.GetMostPopularTags());
+    }
+    [HttpGet("GetTestsByTag/{tag}")]
+    public async Task<IActionResult> GetPopularTags(string tag)
+    {
+        return Ok(await _testRepository.GetAllTestsByTag(tag));
+    }
+    [HttpDelete("Delete/{id}")] 
+    public async Task<IActionResult> Delete(string userId, string id)
+    {
+        await _testRepository.DeleteAsync(userId,id);
         return Ok();
     }
 }

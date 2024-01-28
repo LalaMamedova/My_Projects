@@ -11,3 +11,5 @@ D:\My Projects\Tests\TestsLib\obj\Debug\net8.0\TestsLib.dll
 D:\My Projects\Tests\TestsLib\obj\Debug\net8.0\refint\TestsLib.dll
 D:\My Projects\Tests\TestsLib\obj\Debug\net8.0\TestsLib.pdb
 D:\My Projects\Tests\TestsLib\obj\Debug\net8.0\ref\TestsLib.dll
+D:\My Projects\Tests\TestsLib\bin\Debug\net8.0\TestsLib.runtimeconfig.json
+D:\My Projects\Tests\TestsLib\obj\Debug\net8.0\TestsLib.genruntimeconfig.cache

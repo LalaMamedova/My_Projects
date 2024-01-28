@@ -1,0 +1,19 @@
+﻿.left-side-div button {
+    box-shadow: 5px 3px 2px 2px #969696;
+    height: 40px;
+    width:150px
+}
+.left-side-div button a{
+    color:white;
+    text-decoration:none;
+}
+.card-btn {
+    padding: 5px;
+    color: white;
+    font-weight: bolder;
+    background-color: cornflowerblue;
+    width: 150px;
+    font-size: 20px;
+    border:0;
+    box-shadow: 3px 2px 1px 2px blue;
+}

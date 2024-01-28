@@ -1,17 +1,29 @@
-﻿<!DOCTYPE html>
+﻿@using TestsLib.Models.UserModels
+@{
+    int? userIsAuth = Context.Session.GetInt32("User");
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Tests</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Tests.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Tests.buttons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/buttons.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Tests.autorization.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/autorization.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+
+<body class="bg-dark">
+    <header  >
+        <nav  class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div  class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Tests</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -20,13 +32,28 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Main Page</a>
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="ml-5">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <button style="width:250px" class="bg-primary rounded-2 border-0">
+                            @{
+                                if (userIsAuth == 0)
+                                {
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Signin">Sigin</a>
+                                }
+
+                                {
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Signin">Sign out</a>
+                                }
+                            }
+                        </button>
+                    </li>
+                <ul/>
             </div>
         </nav>
     </header>

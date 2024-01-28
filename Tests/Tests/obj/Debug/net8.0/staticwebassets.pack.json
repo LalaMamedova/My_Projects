@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Tests.bundle.scp.css"
     },
     {
+      "Id": "D:\\My Projects\\Tests\\Tests\\wwwroot\\css\\autorization.css",
+      "PackagePath": "staticwebassets\\css\\autorization.css"
+    },
+    {
+      "Id": "D:\\My Projects\\Tests\\Tests\\wwwroot\\css\\buttons.css",
+      "PackagePath": "staticwebassets\\css\\buttons.css"
+    },
+    {
       "Id": "D:\\My Projects\\Tests\\Tests\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
