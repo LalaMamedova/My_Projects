@@ -22,8 +22,10 @@ namespace Tests.Controllers
 
             if(userCookieValue != null)
             {
-                HttpContext.Session.SetInt32("User", 1);
+                var user = JsonConvert.DeserializeObject<User>(userCookieValue);
+                HttpContext.Session.SetString("User", user.Id);
             }
+
             IEnumerable<string> response = await _testRequests.GetPopularTags();
 
             if(response == null)

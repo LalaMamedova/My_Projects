@@ -15,7 +15,7 @@ namespace TestAPI
             CreateMap<Test, TestDto>()
                 .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.Tags))
                 .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id))
-                .ForMember(dest => dest.Question, opt => opt.MapFrom(src => src.Questions))
+                .ForMember(dest => dest.Questions, opt => opt.MapFrom(src => src.Questions))
                .ReverseMap();
 
             CreateMap<TestQuestion, TestQuestionDto>()

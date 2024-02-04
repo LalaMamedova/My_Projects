@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizLib", "QuizLib\QuizLib.csproj", "{3B328FD4-C6D0-4CFD-B092-1C352F34FDAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizApp", "QuizApp\QuizApp.csproj", "{991D9868-D02F-4F3F-BA7C-601AAD4552B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizMVC", "QuizMVC\QuizMVC.csproj", "{08358F0C-0768-4BD0-BA8B-852164762DE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B328FD4-C6D0-4CFD-B092-1C352F34FDAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B328FD4-C6D0-4CFD-B092-1C352F34FDAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B328FD4-C6D0-4CFD-B092-1C352F34FDAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B328FD4-C6D0-4CFD-B092-1C352F34FDAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991D9868-D02F-4F3F-BA7C-601AAD4552B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991D9868-D02F-4F3F-BA7C-601AAD4552B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991D9868-D02F-4F3F-BA7C-601AAD4552B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991D9868-D02F-4F3F-BA7C-601AAD4552B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08358F0C-0768-4BD0-BA8B-852164762DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08358F0C-0768-4BD0-BA8B-852164762DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08358F0C-0768-4BD0-BA8B-852164762DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08358F0C-0768-4BD0-BA8B-852164762DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F535F679-E565-493E-8BFF-FF22A5BAFA6E}
+	EndGlobalSection
+EndGlobal

@@ -40,7 +40,7 @@ public class TestRepository
     {
         test.Id = _repository.GenerateNewId();
 
-        foreach (var question in test.Question)
+        foreach (var question in test.Questions)
         {
             question.Id = _repository.GenerateNewId();
             question.TestId = test.Id;

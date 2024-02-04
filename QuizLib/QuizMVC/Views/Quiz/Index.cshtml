@@ -1,0 +1,42 @@
+﻿@using QuizLib.Model
+@model Quiz
+@{
+    var info = ViewData["Info"];
+}
+
+<form asp-action="ProcessIndexForm" method="post"
+          asp-route-userId="@Context.Session.GetString("User")">
+   
+    <div class="d-block">
+
+        <div class="col-2">
+            <input asp-for="Title" placeholder="Quiz Title" />
+            <input asp-for="QuizDescription" placeholder="Description" />
+        </div>
+
+        <div class="d-flex text-break h-25 ml-2 mt-2">
+        <fieldset>
+         <legend>Tags</legend>
+            @for (int i = 0; i < Model.Tags.Count; i++)
+            {
+                <input class="mt-2" asp-for="@Model.Tags[i]" />
+            }
+                <button class="bg-primary" type="submit"
+                name="method" value="AddTag">Add tag</button>
+        </fieldset>
+        <div class="col-2">
+                <select asp-for="@Model.Type"
+                        asp-items="Html.GetEnumSelectList<QuizType>()"
+                        class="form-control"></select>
+        </div>
+        </div>
+           
+
+        <button class="bg-primary" name="method" value="Next">
+            Next
+        </button>
+       
+
+        <h2>@info</h2>
+    </div>
+</form>

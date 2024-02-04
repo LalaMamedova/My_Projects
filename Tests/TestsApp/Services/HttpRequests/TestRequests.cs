@@ -5,6 +5,10 @@ using TestsApp.Services.Interfaces;
 using TestsLib.Models;
 using MongoDB.Bson.Serialization.Attributes;
 using System.Text;
+using TestsLib.Dto;
+using System.Net.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Json;
 using TestsLib.Models.UserModels;
 
 namespace TestsApp.Services.HttpRequests;
@@ -17,46 +21,56 @@ public class TestRequests:IHttpRequest
     {
         _httpClient = httpClient;
     }
+    private async Task<T?> RequestTemplate<T>(string uri) where T: class { 
+
+        var response = await _httpClient.GetAsync(uri);
+        string textResult = await response.Content.ReadAsStringAsync();
+
+        T result = JsonConvert.DeserializeObject<T>(textResult);
+        return result != null ? result : null;
+    }
     public async Task<IEnumerable<Test>?> TestGetAll()
     {
-        var response = await _httpClient.GetAsync("https://localhost:7787/api/Test");
-        string textResult = await response.Content.ReadAsStringAsync();
-        IEnumerable<Test> result =  JsonConvert.DeserializeObject<List<Test>>(textResult);
-        return result != null ? result : null; 
-        
+        return await RequestTemplate<List<Test>>("https://localhost:7787/api/TestApi");       
     }
 
     public async Task<IEnumerable<Test>?> GetTestByTag(string tag)
     {
-        var response = await _httpClient.GetAsync($"https://localhost:7787/api/Test/GetTestsByTag/{tag}");
-        string textResult = await response.Content.ReadAsStringAsync();
-        IEnumerable<Test> result = JsonConvert.DeserializeObject<IEnumerable<Test>>(textResult);
-
-        return result != null ? result : null;
-
+        var result = await RequestTemplate<List<Test>>($"https://localhost:7787/api/TestApi/GetTestsByTag/{tag}");
+        return result;
     }
 
     public async Task<IEnumerable<string>?> GetPopularTags()
     {
-        var response = await _httpClient.GetAsync("https://localhost:7787/api/Test/GetPopularTags");
-        string textResult = await response.Content.ReadAsStringAsync();
-        IEnumerable<string> result = JsonConvert.DeserializeObject<List<string>>(textResult);
-        return result != null ? result : null;
-
+        var result = await RequestTemplate<List<string>>($"https://localhost:7787/api/TestApi/GetPopularTags");
+        return result;
     }
     public async Task<Test?> GetTest(string id)
     {
-        var response = await _httpClient.GetAsync($"https://localhost:7787/api/Test/GetById/{id}");
-        string textResult = await response.Content.ReadAsStringAsync();
-        Test result = JsonConvert.DeserializeObject<Test>(textResult);
-        return result != null ? result : null;
-
+        var result =  await RequestTemplate<Test>($"https://localhost:7787/api/TestApi/GetById/{id}");
+        return result;
     }
-  
-    public async Task PostTest(Test newTest)
+
+    public async Task PostTest(TestDto newTest)
     {
         var jsonContent = new StringContent(JsonConvert.SerializeObject(newTest), Encoding.UTF8, "application/json");
-        await _httpClient.PostAsync("https://localhost:7787/api/Test", jsonContent);
+        await _httpClient.PostAsync("https://localhost:7787/api/TestApi/CreateTest", jsonContent);
+
+        //var json = JsonConvert.SerializeObject(newTest);
+        //try
+        //{
+        //    HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "https://localhost:7787/api/TestApi");
+        //    request.Content = new StringContent(json, Encoding.UTF8, "application/json");
+
+        //    HttpResponseMessage response = await _httpClient.SendAsync(request);
+        //    Console.WriteLine(response);
+        //}
+        //catch (Exception ex)
+        //{
+        //    Console.WriteLine(ex.Message);
+        //}
 
     }
+    
+
 }

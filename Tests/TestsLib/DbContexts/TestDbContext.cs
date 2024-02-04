@@ -17,18 +17,18 @@ public class TestDbContext:DbContext
 
     //public TestDbContext()
     //{
-    //    //var config = new ConfigurationBuilder()
-    //    //    .SetBasePath(Directory.GetCurrentDirectory())
-    //    //    .AddJsonFile("appsettings.json")
-    //    //    .Build();
+    //    var config = new ConfigurationBuilder()
+    //        .SetBasePath(Directory.GetCurrentDirectory())
+    //        .AddJsonFile("appsettings.json")
+    //        .Build();
 
-    //    //var settings = MongoClientSettings.FromConnectionString(config["MongoDb:Connection"]);
-    //    //settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+    //    var settings = MongoClientSettings.FromConnectionString(config["MongoDb:Connection"]);
+    //    settings.ServerApi = new ServerApi(ServerApiVersion.V1);
 
-    //    //client = new MongoClient(settings);
-    //    //MongoDatabase = client.GetDatabase(config["MongoDb:DataBaseName"]);
+    //    client = new MongoClient(settings);
+    //    MongoDatabase = client.GetDatabase(config["MongoDb:DataBaseName"]);
 
-    //    //Tests = MongoDatabase.GetCollection<Test>(config["MongoDb:TestCollectionName"]);
+    //    Tests = MongoDatabase.GetCollection<Test>(config["MongoDb:TestCollectionName"]);
     //}
     public DbSet<Test> Tests { get; set; }
     public DbSet<TestQuestion> TestQuestions { get; set; }

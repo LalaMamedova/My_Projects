@@ -1,0 +1,48 @@
+﻿@using QuizLib.Model
+@model Quiz;
+
+<form method="post" asp-action="ProcessResultForm">
+    @Html.HiddenFor(m => m.Title)
+    @Html.HiddenFor(m => m.QuizDescription)
+    @Html.HiddenFor(m => m.Type)
+    @Html.HiddenFor(m => m.Tags)
+    @Html.HiddenFor(m => m.QuizQuestions)
+    @Html.HiddenFor(m => m.RightAnswers)
+
+<div class="d-flex align-content-around">
+
+    <div class="d-block">
+     <h1 class="text-center">Results</h1>
+    @if(Model.Type == QuizType.Learning)
+    {
+        <h4 class="text-center">Check right answer</h4>
+        <div class="form-group d-block mt-2 ml-2 mr-4">
+
+            @for (int i = 0; i < Model.QuizQuestions.Count; i++)
+            {
+                <h2>@Model.QuizQuestions[i].Question</h2>
+                for (int j = 0; j < Model.QuizQuestions[i].Options.Count; j++)
+                {
+                        <input type="checkbox" asp-for="@Model.RightAnswers[i]">
+                        <span>@Model.QuizQuestions[i].Options[j]</span>
+                }
+            }
+        </div>
+    }
+    </div>
+
+    <div class="d-block h-25 mt-5 ml-4">
+        <h5>Condition</h5>
+
+        <h4>Text result</h4>
+            @for (int i = 0; i < Model.QuizResult.ResultTitle.Count; i++)
+            {
+                <input asp-for="@Model.QuizResult.ResultTitle[i]" />
+                <input asp-for="@Model.QuizResult.ResultDescription[i]">
+            }
+        <button name="method" value="AddResult">Add new result</button>
+    </div>
+
+    </div>
+
+</form>

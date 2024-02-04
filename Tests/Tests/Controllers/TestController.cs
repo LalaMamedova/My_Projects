@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using TestsApp.Services.HttpRequests;
+using TestsLib.Dto;
 using TestsLib.Models;
 
 namespace Tests.Controllers
 {
     public class TestController : Controller
     {
-        private readonly ILogger<TestController> _logger;
         private TestRequests _testRequests;
-        public TestController(ILogger<TestController> logger, TestRequests testRequests)
+        public TestController(TestRequests testRequests)
         {
-            _logger = logger;
             _testRequests = testRequests;
         }
 
@@ -29,13 +29,13 @@ namespace Tests.Controllers
         }
 
 
-        [HttpPost("/Test/NextQuestion/{index:int}")]
-        public IActionResult NextQuestion(int index, [FromBody] Test currentTest)
+        [HttpPost("/Test/NextQuestions/{index:int}")]
+        public IActionResult NextQuestions(int index, [FromBody] Test currentTest)
         {
             if (index < currentTest.Questions.Count())
             {
-                TestQuestion question = currentTest.Questions.ElementAt(index);
-                return Json(question);
+                TestQuestion Questions = currentTest.Questions.ElementAt(index);
+                return Json(Questions);
             }
             return Json("End");
         }
@@ -48,19 +48,17 @@ namespace Tests.Controllers
 
             if (userCookieValue.Length > 0)
             {
-                var testModel = new Test
+                TestDto testModel = new TestDto
                 {
-                    Questions = new List<TestQuestion>()
+                    Questions = new List<TestQuestionDto>
                     {
-                        new TestQuestion()
+                        new TestQuestionDto()
                         {
                             Choice = new List<string>(["", "", "", ""]),
                         }
                     },
-                    Tags = new List<string>(["Test","",""])  
+                    Tags = new List<string>([""])  
                 };
-
-                ModelState.Clear();
                 return View(testModel);
             }
             else
@@ -70,11 +68,12 @@ namespace Tests.Controllers
         }
 
         [HttpPost("/Test/CreateNewTestPost")]
-        public async Task<IActionResult> CreateNewTestPost(Test newTest, string action)
+        public async Task<IActionResult> CreateNewTestPost(TestDto newTest, string action)
         {
             if (action == "Submit")
             {
                 await PostTest(newTest);
+                return Redirect("/Home/Index");
             }
             else if (action == "New Tag")
             {
@@ -84,22 +83,24 @@ namespace Tests.Controllers
             {
                 await CreateNewQuestion(newTest);
             }
+
+
             return View("CreateTest", newTest);
         }
 
 
         [HttpPost("/Test/CreateNewQuestion")]
-        public async Task<IActionResult> CreateNewQuestion(Test newTest)
+        public async Task<IActionResult> CreateNewQuestion(TestDto newTest)
         {
             if (newTest.Questions != null)
             {
-                newTest.Questions.Add(new TestQuestion() { Choice = new(["", "", "", ""]) });
+                newTest.Questions.Add(new TestQuestionDto() { Choice = new(["", "", "", ""]) });
             }
             else
             {
-                newTest.Questions = new List<TestQuestion>()
+                newTest.Questions = new List<TestQuestionDto>()
                 {
-                    new TestQuestion()
+                    new TestQuestionDto()
                     {
                         Choice = new(),
                     }
@@ -111,7 +112,7 @@ namespace Tests.Controllers
 
 
         [HttpPost("/Test/CreateNewTag")]
-        public async Task<IActionResult> CreateNewTag(Test newTest)
+        public async Task<IActionResult> CreateNewTag(TestDto newTest)
         {
             newTest.Tags.Add("");
             return View("CreateTest", newTest);
@@ -119,11 +120,15 @@ namespace Tests.Controllers
 
 
         [HttpPost("/Test/PostTest")]
-        public async Task<IActionResult> PostTest(Test newTest)
+        public async Task<IActionResult> PostTest(TestDto newTest)
         {
-            //newTest = JsonConvert.DeserializeObject<Test>(TempData["Test"].ToString());
+            Console.WriteLine(newTest);
+
+            string? userId = HttpContext.Session.GetString("User");
+            newTest.UserId = userId;
+
             await _testRequests.PostTest(newTest);
-            return Redirect("/Home/Index");
+            return View("CreateTest", newTest);
         }
     }
 }

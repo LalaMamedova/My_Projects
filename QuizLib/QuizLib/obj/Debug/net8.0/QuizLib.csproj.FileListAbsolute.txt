@@ -1,0 +1,13 @@
+D:\My Projects\QuizLib\QuizLib\bin\Debug\net8.0\QuizLib.deps.json
+D:\My Projects\QuizLib\QuizLib\bin\Debug\net8.0\QuizLib.dll
+D:\My Projects\QuizLib\QuizLib\bin\Debug\net8.0\QuizLib.pdb
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.csproj.AssemblyReference.cache
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.AssemblyInfoInputs.cache
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.AssemblyInfo.cs
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.csproj.CoreCompileInputs.cache
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.sourcelink.json
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.dll
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\refint\QuizLib.dll
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\QuizLib.pdb
+D:\My Projects\QuizLib\QuizLib\obj\Debug\net8.0\ref\QuizLib.dll

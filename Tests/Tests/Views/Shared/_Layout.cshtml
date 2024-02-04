@@ -1,6 +1,6 @@
 ﻿@using TestsLib.Models.UserModels
 @{
-    int? userIsAuth = Context.Session.GetInt32("User");
+    string? userIsAuth = Context.Session.GetString("User");
 }
 
 <!DOCTYPE html>
@@ -40,18 +40,19 @@
             <div class="ml-5">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <button style="width:250px" class="bg-primary rounded-2 border-0">
+                        <button style="width:200px" class="bg-primary rounded-2 border-0">
                             @{
-                                if (userIsAuth == 0)
+                                if (userIsAuth == null)
                                 {
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Signin">Sigin</a>
                                 }
-
+                                else
                                 {
                                     <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Signin">Sign out</a>
                                 }
                             }
                         </button>
+                        <button><a asp-area="" asp-controller="User" asp-action="SignUp">SignUp</a></button>
                     </li>
                 <ul/>
             </div>

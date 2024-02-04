@@ -1,0 +1,128 @@
+﻿@using Newtonsoft.Json
+@using QuizLib.Model
+@model Quiz
+@{
+    var info = ViewData["Info"];
+}
+
+<form asp-action="ProcessQuestionForm" method="post" >
+
+    @Html.HiddenFor(m => m.Title)
+    @Html.HiddenFor(m => m.QuizDescription)
+    @Html.HiddenFor(m => m.Type)
+
+    @for (int i = 0; i < Model.Tags.Count; i++)
+    {
+        @Html.HiddenFor(model => model.Tags[i])
+    }
+   @*  @for (int i = 0; i < Model.QuizResults.Count; i++)
+    {
+        @Html.HiddenFor(model => model.QuizResults[i])
+
+        for (int j = 0; j < Model.QuizResults[i].Answers.Count; j++)
+        {
+            @Html.HiddenFor(model => model.QuizResults[i].Answers[j])
+        }
+    } *@
+
+    <div id="main" class="d-block text-break text-center h-25 ml-2 mt-2">
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th>Options</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < Model.QuizQuestions.Count; i++)
+                {
+                    <tr>
+                        <td>
+                            <input class="mt-2" placeholder="Question"
+                                   asp-for="@Model.QuizQuestions[i].Question" />
+                            <button class="bg-danger" name="method"
+                                    onclick="question(@i);"
+                                    value="RemoveQuestion">
+                                Remove
+                            </button>
+                        </td>
+
+                        <td>
+                            @for (int j = 0; j < Model.QuizQuestions[i].Options.Count; j++)
+                            {
+                                <div class="d-block">
+                                    <input class="mt-2" placeholder="Option" 
+                                           asp-for="@Model.QuizQuestions[i].Options[j]" />
+
+                                    <button class="bg-danger" name="method"
+                                            onclick="option(@i, @j)"
+                                            value="RemoveOption">
+                                        Remove
+                                    </button>
+                                </div>
+                            }
+
+                            <button class="bg-success  mt-2 mb-2"
+                                    name="method"
+                                    onclick="question(@i)"
+                                    value="AddOption">
+                                    Add Option
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <button class="bg-primary" name="method" value="AddQuestion">
+            Add Question
+        </button>
+
+    </div>
+
+    <button class="bg-primary" name="method" value="Next">
+        Next
+    </button>
+
+</form>
+
+
+   <script>
+
+    // document.getElementById("addOption").addEventListener("click", () => {
+    //         alert("test");
+
+    //         fetch("AddOption", {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //             },
+    //             body: JSON.stringify(@Html.Raw(JsonConvert.SerializeObject(Model))),
+    //         })
+    //     })
+    
+    
+   function option(questionIndex, optionIndex) {
+
+        var optionInput = document.createElement("input");
+        question(questionIndex);
+
+        optionInput.name = "optionIndex";
+        optionInput.value = optionIndex;
+        optionInput.type = "hidden";
+
+        document.getElementById("main").appendChild(optionInput);
+   }
+
+   function question(questionIndex) {
+
+        var questionInput = document.createElement("input");
+
+        questionInput.name = "questionIndex";
+        questionInput.value = questionIndex;
+        questionInput.type = "hidden";
+       
+        document.getElementById("main").appendChild(questionInput);
+   }
+    </script>

@@ -1,0 +1,11 @@
+﻿@using TestsLib.Dto
+@model UserDto
+
+<div class="d-block col-3">
+    <form method="post" asp-action="SignUpAction">
+        <input asp-for="Email"/>
+        <input type="password" placeholder="password" asp-for="Password"  />
+        <input placeholder="username" asp-for="Username"/>
+        <button class="bg-primary">Submit</button>
+    </form>
+</div>
