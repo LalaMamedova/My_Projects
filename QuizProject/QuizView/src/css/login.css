@@ -1,0 +1,27 @@
+.login-div {
+  display: block;
+  background-color: black;
+  width: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: dotted white 3px;
+  transform: translate(-50%, -50%);
+}
+.login-div input {
+  width: 300px;
+  height: 30px;
+  margin: 5px 0px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.login-div button {
+  margin: 10px;
+}
+.login-div button:hover {
+  border: dashed white 2px;
+}/*# sourceMappingURL=login.css.map */
