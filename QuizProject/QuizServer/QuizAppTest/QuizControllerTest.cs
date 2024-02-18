@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using QuizAPI.Controllers;
 using QuizApp.Repository.Generic;
 using QuizApp.Repository.ModelRepository;
-using QuizLib.Data.Enums;
+using QuizLib.Data;
 using QuizLib.Model;
 using System.Runtime.CompilerServices;
 

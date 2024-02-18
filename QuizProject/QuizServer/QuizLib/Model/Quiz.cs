@@ -2,7 +2,7 @@
 using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json.Converters;
 using QuizApp.Model;
-using QuizLib.Data.Enums;
+using QuizLib.Data;
 using System.Text.Json.Serialization;
 
 namespace QuizLib.Model;

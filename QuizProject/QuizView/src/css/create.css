@@ -1,0 +1,49 @@
+.create input {
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 250px;
+  background-color: #3e3e3e;
+  color: white;
+  height: 35px;
+  text-align: center;
+}
+.create button {
+  background-color: #fb5938;
+}
+.create li {
+  display: flex;
+  background-color: black;
+  list-style-type: none;
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 5px;
+  min-width: 250px;
+}
+.create li span {
+  position: relative;
+  color: #fb5938;
+  top: 5px;
+  margin-left: 5px;
+}
+.create select {
+  height: 40px;
+}
+.create .remove, .create .edit {
+  cursor: pointer;
+}
+.create .remove {
+  color: #fb5938;
+}
+.create .edit {
+  color: rgb(255, 255, 128);
+}
+.create .prev-next-div {
+  position: relative;
+  left: 55%;
+  justify-content: center;
+  align-items: center;
+}
+.create .prev-next-div button {
+  margin: 0px 10px 10px 10px;
+  padding: 10px;
+}/*# sourceMappingURL=create.css.map */

@@ -1,8 +1,3 @@
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
 header{
   display:flex;
   position: absolute;
@@ -19,14 +14,60 @@ header{
 }
 .nav-btns button{
   margin: 0px 10px;
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #ffffff;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
 }
 
+
+
+.nav-btns button:hover,
+.nav-btns button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.nav-btns button:active {
+  background: var(--color);
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
 main{
+  position: relative;
   flex-grow: 1;
-  margin-top: 100px;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 80px;
+  background-color: #1c1b1b;
 }
 footer{
   flex-shrink: 0;
+  background-color: #0e0e0e;
 }
 
 

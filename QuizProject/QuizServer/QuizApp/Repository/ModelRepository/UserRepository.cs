@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Newtonsoft.Json.Linq;
 using QuizApp.Services;
 using QuizApp.Services.JwtServices;
 using QuizLib.Dto.Request;
@@ -17,11 +18,23 @@ public class UserRepository
     public UserRepository(UserManager userManager,
                           JwtCreate jwtCreate)
     {
-
         _jwtCreate = jwtCreate;
         _userManager = userManager;
     }
-
+    private LoginResponse ConvertToLoginReponse(AppUser user,JwtSecurityToken token)
+    {
+        return new LoginResponse
+        {
+            Email = user.Email,
+            Id = user.Id.ToString(),
+            UserQuizes = user.UserQuizes,
+            Username = user.UserName,
+            UserToken = new Token()
+            {
+                AcssesToken = new JwtSecurityTokenHandler().WriteToken(token),
+            }
+        };
+    }
     public async Task<LoginResponse> SigninAsync(LoginRequest loginRequest)
     {
         try
@@ -45,17 +58,7 @@ public class UserRepository
 
             await _userManager.UpdateAsync(user);
 
-            return new LoginResponse
-            {
-                Email = user.Email,
-                Id = user.Id.ToString(),
-                UserQuizes = user.UserQuizes,
-                Username = user.UserName,
-                UserToken = new Token()
-                {
-                    AcssesToken = new JwtSecurityTokenHandler().WriteToken(token),
-                }
-            };
+            return ConvertToLoginReponse(user, token);
         }
         catch (Exception ex)
         {
@@ -65,7 +68,7 @@ public class UserRepository
       
     }
 
-    public async Task<AppUser> GoogleSigninAsync(string tokenString) {
+    public async Task<LoginResponse> GoogleSigninAsync(string tokenString) {
         try
         {
             var handler = new JwtSecurityTokenHandler();
@@ -76,7 +79,8 @@ public class UserRepository
             user.Token = new() { AcssesToken = tokenString };
             await _userManager.UpdateAsync(user);
 
-            return user;
+            return ConvertToLoginReponse(user, token);
+
         }
         catch (Exception ex)
         {

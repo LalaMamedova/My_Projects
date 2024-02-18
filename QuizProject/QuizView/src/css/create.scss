@@ -1,0 +1,60 @@
+.create{    
+    input{
+        margin-right: 10px;
+        margin-top: 10px;
+        width: 250px;
+        background-color: #3e3e3e;
+        color: white;
+        height: 35px;
+        text-align: center;
+        
+    }
+    
+    button{
+        background-color: #fb5938;
+    }
+
+    li{
+        display: flex;
+        background-color: black;
+        list-style-type: none;
+        margin-top: 10px;
+        margin-right: 5px;
+        padding: 5px;
+        min-width: 250px;
+
+        span{
+            position: relative;
+            color: #fb5938;
+            top: 5px;
+            margin-left: 5px;
+        }
+
+    }
+
+    select{
+        height: 40px;
+        
+    }
+    .remove,.edit{
+        cursor: pointer;
+    }
+    .remove{
+        color:#fb5938
+    }
+    .edit{
+        color:rgb(255, 255, 128);
+    }
+
+    .prev-next-div{
+        position: relative;
+        left: 55%;
+        justify-content: center;
+        align-items: center;
+        button{
+            margin: 0px 10px 10px 10px; 
+            padding: 10px;
+        }
+    }
+
+}

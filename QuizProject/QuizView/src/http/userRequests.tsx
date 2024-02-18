@@ -7,7 +7,7 @@ export const googleSigninAsync = async(user:User)=>{
     .then(
         data=>{localStorage.setItem("user",JSON.stringify(data)),
         user.setData(data);
-    });;
+    });
 }
 
 export const singinAsync = async(signinUser:object,user:User)=>{

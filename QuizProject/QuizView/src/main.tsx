@@ -1,16 +1,20 @@
-import React, { createContext } from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import User from './class/User.tsx';
-export const Context = createContext({});
+import React, { createContext, useState } from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import User from './class/User';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-   <Context.Provider value={
-    {
-      user: new User()
-    }}> 
-      <App />
-    </Context.Provider>
-  </React.StrictMode>
-)
+export const Context = createContext({});
+const Root = () => {
+  const [user, setUser] = useState<User | null>(new User()  || null);
+  const userValue = {user,setUser}
+
+  return (
+    <React.StrictMode>
+      <Context.Provider value={userValue}>
+        <App />
+      </Context.Provider>
+    </React.StrictMode>
+  );
+};
+
+ReactDOM.render(<Root />, document.getElementById('root'));

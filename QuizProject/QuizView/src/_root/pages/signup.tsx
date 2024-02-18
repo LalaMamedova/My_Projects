@@ -1,8 +1,8 @@
 import { singupAsync } from '@/http/userRequests'
 import '../../css/login.css'
-import { useNavigate } from 'react-router-dom';
 import { SIGN_IN } from '@/utilit/paths';
 import { observer } from 'mobx-react-lite';
+import { Link, useNavigate } from 'react-router-dom';
   
 export const Signup = observer(()=>{
     const navigation = useNavigate();
@@ -57,7 +57,7 @@ export const Signup = observer(()=>{
             </form>
             <button onClick={singup}>Sign up</button>
            
-            <button onClick={()=>navigation(SIGN_IN)}>Alredy have account?</button>
+            <button><Link to={SIGN_IN}>Alredy have account?</Link></button>
 
         </div>
     )

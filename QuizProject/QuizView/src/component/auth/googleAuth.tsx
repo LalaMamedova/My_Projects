@@ -1,11 +1,10 @@
-import User from "@/class/User";
-import { useLoginHooks } from "@/hooks/loginHooks";
-import { googleSigninAsync } from "@/http/userRequests";
+import { useLoginHook } from "@/hooks/loginHooks";
 import { gapi } from "gapi-script";
 import { useEffect } from "react";
 import GoogleLogin, { GoogleLogout } from "react-google-login";
 
 const GoogleAuth =  ()=>{
+  
     const clientId="803934699147-922f3qvihvq77k9ukenrnkcu0cv4evor.apps.googleusercontent.com";
 
     useEffect(()=>{
@@ -14,10 +13,11 @@ const GoogleAuth =  ()=>{
         })
       },[])
    
-      const GoogleSignin = ({ user }: { user: User }) => {
+      const GoogleSignin = () => {
+        const {loginAsync} = useLoginHook();
+        
         const responseGoogleSuccess = (response: any) => {
-            localStorage.setItem("token", response.tokenId);
-            googleSigninAsync(user);
+          loginAsync("google",response);
         }
         
         const responseGoogleFailure = (response: object) => {
@@ -39,7 +39,7 @@ const GoogleAuth =  ()=>{
 
       const GoogleSignout = ()  => {
 
-       const logOutAsync =  useLoginHooks();
+       const {logOutAsync} =  useLoginHook();
   
         return (
           <GoogleLogout

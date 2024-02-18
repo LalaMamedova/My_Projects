@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using QuizLib.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,5 +22,9 @@ public class QuizQuestion
     public List<string> Options { get; set; }
 
     [BsonElement("rightAnswers")]
-    public ICollection<string> RightAnswers { get; set; }
+    public ICollection<string>? RightAnswers { get; set; }
+
+    [BsonElement("optionFormat")]
+    public OptionFormat OptionFormats { get; set; }   
+
 }
