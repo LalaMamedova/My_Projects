@@ -25,6 +25,6 @@ public class QuizQuestion
     public ICollection<string>? RightAnswers { get; set; }
 
     [BsonElement("optionFormat")]
-    public OptionFormat OptionFormats { get; set; }   
+    public OptionFormat OptionFormat { get; set; }   
 
 }
